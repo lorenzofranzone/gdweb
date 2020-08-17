@@ -1,0 +1,24 @@
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* M A R G I N S
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+$spacerM: .25rem;
+
+@for $i from 0 through 5{
+   .m-#{$i}{ margin: $spacerM * $i!important; }
+   .mt-#{$i}{ margin-top: $spacerM * $i!important; }
+   .mr-#{$i}{ margin-right: $spacerM * $i!important; }
+   .mb-#{$i}{ margin-bottom: $spacerM * $i!important; }
+   .ml-#{$i}{ margin-left: $spacerM * $i!important; }
+   .mx-#{$i}{ margin-left: $spacerM * $i!important; margin-right: $spacerM * $i!important; }
+   .my-#{$i}{ margin-top: $spacerM * $i!important; margin-bottom: $spacerM * $i!important; }
+   $spacerM: $spacerM + .25;
+} // margins
+
+.mr-auto{ margin-right: auto; }
+.ml-auto{ margin-left: auto; }
+.mx-auto{ margin-right: auto; margin-left: auto; }

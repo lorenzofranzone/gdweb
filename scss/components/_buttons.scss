@@ -1,0 +1,76 @@
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* B U T T O N S
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* BTN DEFAULT
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.btn {
+   
+   padding: $spaceHalf $spaceBase;
+   margin: $spaceMin 0;
+   // font-size: $fontBaseSize;
+   font-size: 1rem;
+   font-weight: 500;
+   line-height: $lineHeight;
+   text-align: center;
+   text-decoration: none;
+   // vertical-align: middle;
+   border: none;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+
+   /*
+   * Buttons with icons
+   */
+
+   &.icon-left i {
+      margin-right: $spaceBase / 1.5; line-height: 100%;
+   }
+   &.icon-right i {
+      margin-left: $spaceBase / 1.5; line-height: 100%;
+   }
+
+   /*
+   * Small buttons
+   */
+
+   &.btn-sm {
+      font-size: $fontBaseSize * .8;
+      padding: $spaceMin $spaceHalf;
+   }
+
+
+   /*
+   * Large buttons
+   */
+
+   &.btn-lg {
+      font-size: $fontBaseSize * 1.4;
+      font-weight: 400;
+      padding: $fontBaseSize * .8 $fontBaseSize;
+   }
+
+   /*
+   * Full width buttons
+   */
+   
+   &.full {
+      width: 100%;
+   }
+
+} // .btn
+
+.btn.primary{
+   color: #fff;
+}

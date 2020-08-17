@@ -1,0 +1,174 @@
+/*
+* //////////////////////////////////////////////////
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* R E S E T
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+* //////////////////////////////////////////////////
+*/
+
+// DA CONFIGURARE COLORI DI:
+// ins , mark, hr
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* T Y P O G R A P H Y
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+
+
+pre, code, kbd, samp{
+   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+   font-size: 1em;
+}
+
+pre{
+   margin-top: 0;
+   margin-bottom: 1rem;
+   overflow: auto;
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* XLF RESET
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+*, *:before, *:after{
+   padding: 0;
+   margin: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+body{
+   overflow-x: hidden;
+}
+
+figure{
+   margin: 0 0 1rem;
+}
+
+img{
+   vertical-align: middle;
+   border-style: none;
+}
+
+svg{
+   overflow: hidden;
+   vertical-align: middle;
+}
+
+hr{
+   margin: 1.8rem 0;
+   display: block;
+   height: 1px;
+}
+
+ins{
+   // background-color: ligthen($primary, 30);
+   color: $secondary;
+   text-decoration: none;
+}
+
+mark{
+   // background-color: ligthen($primary, 30);
+   color: $secondary;
+   font-style: italic;
+   font-weight: bold;
+}
+
+.outline-solid{
+   background: transparent!important;
+   border-style: solid!important;
+}
+
+.outline-dotted{
+   background: transparent!important;
+   border-style: dotted!important;
+}
+
+.outline-dashed{
+   background: transparent!important;
+   border-style: dashed!important;
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* RICHARD CLARK RESET
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+/*
+* html5doctor.com Reset Stylesheet
+* v1.6.1
+* Last Updated: 2010-09-17
+* Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video{
+   border: 0;
+   outline: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+   display: block;
+}
+
+nav ul{
+   list-style: none;
+}
+
+blockquote, q{
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after{
+   content: '';
+   content: none;
+}
+
+a{
+   font-size: 100%;
+   background: transparent;
+}
+
+
+del{
+   text-decoration: line-through;
+}
+
+abbr[title], dfn[title]{
+   border-bottom: 1px dotted;
+   cursor: help;
+}
+
+table{
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+input, select{
+   vertical-align: middle;
+}

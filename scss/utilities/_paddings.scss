@@ -1,0 +1,20 @@
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* P A D D I N G S
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+$spacerP: .25rem;
+
+@for $i from 0 through 5{
+   .p-#{$i}{ padding: $spacerP * $i!important; }
+   .pt-#{$i}{ padding-top: $spacerP * $i!important; }
+   .pr-#{$i}{ padding-right: $spacerP * $i!important; }
+   .pb-#{$i}{ padding-bottom: $spacerP * $i!important; }
+   .pl-#{$i}{ padding-left: $spacerP * $i!important; }
+   .px-#{$i}{ padding-left: $spacerP * $i!important; padding-right: $spacerP * $i!important; }
+   .py-#{$i}{ padding-top: $spacerP * $i!important; padding-bottom: $spacerP * $i!important; }
+   $spacerP: $spacerP + .25;
+} // paddings

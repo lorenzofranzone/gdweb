@@ -1,0 +1,1822 @@
+@media print{
+
+   .no-print{
+      display: none!important;
+   }
+
+}
+
+/*
+* //////////////////////////////////////////////////
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* S T Y L E
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+* //////////////////////////////////////////////////
+*/
+
+@import 'scss/_variables';
+@import 'scss/_reset';
+@import 'scss/_layout-grid';
+@import 'scss/_utilities';
+@import 'scss/_typography';
+@import 'scss/_color-themes';
+@import 'scss/_components';
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* SECTION
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+section{ padding: 3rem 0; }
+
+@media screen and (max-width: $media-smartphone){
+
+   section{ padding: 2rem 0; }
+
+} // @ smartphone
+
+
+/*
+* MAIN TITLE
+*/
+
+.main-title{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 1.25rem;
+   font-weight: 400;
+   
+   &::after{
+      content: '';
+      display: block;
+      height: 1rem;
+      width: 5rem;
+      border-bottom: 2px solid $primary;
+      margin: 0 auto;
+   }
+   
+   &.has-sub + p{
+      margin-bottom: $spaceBase;
+      text-transform: uppercase;
+   }
+   
+} // .main-title
+
+
+/*
+* ACCORDIONS
+*/
+
+button.accordion {
+   background-color: $light;
+   cursor: pointer;
+   padding: $spaceBase;
+   padding-right: 3rem;
+   width: 100%;
+   border: none;
+   text-align: left;
+   outline: none;
+   font-size: 1rem;
+   transition: 0.2s;
+   border-bottom: 1px solid #fff;
+   position: relative;
+}
+
+button.accordion.active, button.accordion:hover {
+   background-color: $primary;
+   color: #fff;
+}
+
+button.accordion.active{
+   
+   button.accordion:after {
+      content: '\002B';
+      color: #fff;
+   }
+   
+}
+
+button.accordion:after {
+   content: '\002B';
+   font-weight: bold;
+   position: absolute;
+   top: 50%;
+   right: 1.5rem;
+   transform: translateY(-50%);
+}
+
+button.accordion.active:after {
+   content: "\2212";
+}
+
+div.panel {
+   padding: 0 18px;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.2s ease-out;
+   
+   p{ margin-top: $spaceBase; }
+   
+   ul{ list-style: none; }
+}
+
+/*
+* PAGINATION
+*/
+
+.pagination{
+
+   ul{
+      list-style: none;
+      display: flex;
+
+      li{
+         display: flex;
+         align-self: center;
+         justify-self: center;
+         padding: .5rem .75rem;
+         margin: 1rem .25rem;
+         border: 1px solid $secondary;
+         cursor: pointer;
+
+         &:hover{
+            background: $secondary;
+            color: #fff;
+         }
+
+         &.active,&.active:hover{
+            background: $primary;
+            color: #fff;
+            border-color: $primary;
+         }
+
+      }
+
+   }
+
+} // .pagination
+
+
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* H E A D E R
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+header{
+   
+   .header__image{
+      height: 20vh;
+      // Default header image
+      background: url('../img/chi-siamo.jpg');
+      background-size: cover;
+      background-position: center -34rem;
+      
+      img{
+         object-fit: cover;
+         object-position: center -34rem;
+         width: 100%;
+         height: 100%;
+      }
+   
+   } // .header__image
+
+} // header
+
+
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* M A I N
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+main{
+   padding-top: 2rem;
+}
+
+@media screen and (max-width: $media-desktop){
+   
+   main{
+      padding-top: 4rem;
+   }
+   
+} // @ tablet
+
+@media screen and (max-width: $media-tablet){
+   
+   main{
+      padding-top: 2rem;
+   }
+   
+} // @ tablet
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* INDEX
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+/*
+* SLIDER
+*/
+
+.slider{
+   min-height: 50vh;
+   background: $secondaryLight;
+   background: url('../img/home.jpg');
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 12rem 0;
+   
+   .main-search{
+      min-height: 40px;
+      width: 100%;
+      background: rgba(0,0,0,.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: $spaceBase;
+      border-radius: 0 8px 8px 8px;
+      position: relative;
+      
+      .search-top{
+         position: absolute;
+         bottom: 100%;
+         left: 0;
+         display: flex;
+         align-items: center;
+         width: 100%;
+         
+         .search-title{
+            padding: $spaceHalf;
+            background: $primary;
+            color: #fff;
+            font-size: .9rem;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            margin-right: $spaceHalf;
+         }
+         
+      } // .search-top
+      
+      .flex-search-1{
+         display: flex;
+         align-items: center;
+         flex: 50% 1 0;
+         flex-wrap: wrap;
+         
+         > div{
+            flex: 20% 1 1;
+            margin: $spaceHalf;
+         }
+         
+         input{ 
+            background: #fff;
+         }
+         
+         .comune{ margin: $spaceHalf; }
+         
+      } // .flex-search-1
+      
+      .flex-search-2{
+         display: flex;
+         align-items: center;
+         flex: 50% 1 0;
+         flex-wrap: wrap;
+         
+         > div{
+            flex: 20% 1 1;
+            margin: $spaceHalf;
+            
+            input{ 
+               background: #fff;
+            }
+         }
+         
+      } // .flex-search-2
+
+      .search-custom{
+         padding: .4rem $spaceHalf;
+         color: #fff;
+         font-size: .9rem;
+         text-transform: uppercase;
+         margin-bottom: 0;
+         cursor: pointer;
+         font-weight: 600;
+      }
+      
+      .advanced-search{
+         display: flex;
+         align-items: center;
+         flex: 100% 1 0;
+         flex-wrap: wrap;
+         display: none;
+         border-top: 1px solid $primary;
+         margin-top: 0.5rem;
+         padding-top: 0.5rem;
+         
+         > div{
+            flex: 10% 1 1;
+            margin: $spaceHalf;
+            
+            input{ 
+               background: #fff;
+            }
+         }
+         
+         > div.features{
+            flex: 70% 1 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            
+            .check{
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: $spaceHalf $spaceBase 0 0;
+               
+               input[type="checkbox"]{
+                  border: 0;
+                  border-radius: 0;
+               }
+               
+               label{
+                  display: inline-block;
+                  border: 0;
+                  font-weight: 200;
+                  text-transform: none;
+                  font-size: 1rem;
+               }
+               
+            }
+            
+         }
+         
+      } // .advanced-search
+      
+      .show-advanced-search{
+         display: flex!important;
+         align-items: flex-start!important;
+      }
+      
+      button[type="submit"]{
+         padding: .5rem 1rem;
+         appearance: none;
+         border-radius: 0px;
+         border: 1px solid $primary;
+         background: $primary;
+         height: auto;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: #fff;
+         cursor: pointer;
+         text-transform: uppercase;
+         position: absolute;
+         right: 0;
+         top: 104%;
+         left: 50%;
+         transform: translateX(-50%);
+         
+         i{ margin-right: $spaceHalf; }
+      
+      } // button-submit
+      
+      label{ color: #fff; }
+      
+   } // .main-search
+   
+} // .slider
+
+
+// IMMOBILI IN VENDITA / AFFITTO
+
+
+
+
+/*
+* MEDIA QUERY
+*/
+
+@media screen and (max-width: $media-desktop){
+   
+   .slider{
+      
+      .main-search{
+         display: flex;
+         flex-direction: column!important;
+         align-items: flex-start;
+         
+         .flex-search-1{
+            width: 100%;
+         }
+         
+         .flex-search-2{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            position: relative;            
+         }
+         
+      } // .main-search
+      
+   } // .slider
+   
+} // @ max - media-desktop
+
+@media screen and (max-width: $media-smartphone){
+   
+   .slider{
+      
+      .main-search{
+         display: flex;
+         flex-direction: column!important;
+         
+         .flex-search-1{
+            width: 100%;
+            flex-direction: row wrap;
+            
+            .custom-select{ flex: 100%; }
+            
+            select{ flex: 50% 1 1; }
+         }
+         
+         .flex-search-2{
+            width: 100%;
+            flex-flow: row wrap;
+            
+            > div{
+               flex: 20% 1 1;
+            }
+            
+            input{ flex: 40% 1 1; }  
+            
+         }
+         
+         .advanced-search{
+            > div{ flex: 20% 1 1!important; }
+            
+            > div.features{
+               flex-direction: column;
+               align-items: start;
+            }
+         
+         }
+
+      } // .main-search
+      
+   } // .slider
+   
+} // @ max - smartphone
+
+@media screen and (max-width: 410px){
+   
+   .slider{
+      
+      .main-search{
+         
+         .flex-search-2{
+            width: 100%;
+            
+            > div{
+               flex: 100% 1 1;
+            }
+            
+            input{ flex: 40% 1 1; }
+            
+         }
+
+         .advanced-search{
+            > div{ flex: 30% 1 1!important; }
+         }
+         
+      } // .main-search
+      
+   } // .slider
+   
+} // @ max - smartphone
+
+
+
+/*
+* FEATURED PROPERTIES
+*/
+
+.featured-properties{
+   
+   .listing-cards{
+      
+      a{ text-decoration: none ; color: $secondaryDark;}
+      a:hover .card-img img{ filter: blur(1px); }
+      
+      .card-img{
+         position: relative;
+         padding-bottom: 56.2%;
+         
+         img{
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+         }
+         
+         &::after {
+            content: '';
+            display: block;
+            background: $secondaryDark;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: .3;
+         }
+         
+      }
+      
+      .card-img.new::before{
+         content: 'Nuova Proposta';
+         display: inline-block;
+         position: absolute;
+         z-index: 888;
+         background: $primary;
+         padding: 4px;
+         top: .5rem;
+         left: 0;
+         text-transform: uppercase;
+         color: #fff;
+         font-size: .8rem;
+         font-weight: 400;
+      }
+      
+      .card-icons{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: $light;
+         font-size: .8rem;
+         font-weight: 400;
+         text-transform: uppercase;
+         
+         > div{
+            margin: $spaceMin $spaceHalf;
+            position: relative;
+            display: flex;
+            align-items: center;
+         }
+         
+         .size::after{
+            content: 'Mq';
+            margin-left: $spaceMin;
+            font-size: .75rem;
+            font-weight: 400;
+         }
+         
+         .room::before{
+            content: 'Locali:';
+            margin-right: $spaceMin;
+            font-size: .75rem;
+            font-weight: 400;
+         }
+         
+         .bath::before{
+            content: 'Bagni:';
+            margin-right: $spaceMin;
+            font-size: .75rem;
+            font-weight: 400;
+         }
+         
+      }
+      
+      .card-type{
+         position: absolute;
+         z-index: 2;
+         bottom: 3.5rem;
+         left: $spaceHalf;
+         color: #fff;
+         font-size: .65rem;
+         font-weight: 400;
+         letter-spacing: .05rem;
+         text-transform: uppercase;
+         padding: $spaceHalf;
+         background: rgba(0,0,0,.5);         
+      }
+      
+      .card-price{
+         position: absolute;
+         z-index: 2;
+         bottom: $spaceBase;
+         left: $spaceHalf;
+         color: #fff;
+         font-size: .9rem;
+         font-weight: 400;
+         letter-spacing: .08rem;
+         text-transform: uppercase;
+         padding: $spaceHalf;
+         background: rgba(0,0,0,.5);
+      }
+      
+   } // .listing-cards
+   
+} // .featured-properties
+
+/*
+* ADV
+*/
+
+.adv{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: url('../img/parallax-bg.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   padding: $spaceBase * 10 0;
+   position: relative;
+   
+   &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      background: rgba(23, 64, 121, .6);
+      display: block;
+   }
+   
+   .adv__logo{
+      margin-bottom: $spaceBase;
+      position: relative;
+      z-index: 2;
+   }
+   
+   hr{ width: 50%; margin: .8rem 0; }
+   
+   .slogan{
+      margin: 0;
+      padding: $spaceBase;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 2px 2px 2px rgba(0,0,0,.8);
+      position: relative;
+      z-index: 2;
+      
+      span{
+         color: #fbba06;
+         font-weight: 600;
+      }
+      
+   }
+   
+   .btn-call{
+      padding: $spaceBase $spaceBase;
+      background: rgb(23, 64, 121);
+      color: #fbba06;
+      margin: $spaceBase;
+      position: relative;
+      z-index: 2;
+      text-transform: uppercase;
+      border: 1px solid #fff;
+      cursor: pointer;
+      transition: background .5s;
+      
+      &:hover{
+         background: darken(#174079,5);
+      }
+   }
+   
+} // .adv
+
+
+/*
+* WHO
+*/
+
+.who{
+   
+   .left, .right{
+      
+      img{ background: $light; }
+      
+      .btn{ background: $secondary; color: $light; }
+      
+   }
+   
+} // .who
+
+@media screen and (min-width: $media-tablet){
+   
+   .who{
+      
+      .left{
+         border-right: 1px solid $light;
+      }
+      
+   }
+   
+}
+
+@media screen and (min-width: $media-desktop){
+
+   .who{
+      
+      .left, .right{
+         padding-left: $spaceBase * 3;
+         padding-right: $spaceBase * 3;
+      }
+      
+   }
+   
+}
+
+
+/*
+* WHAT
+*/
+
+.what{
+   
+   .top{
+      background: $light;
+      color: $secondaryDark;
+      border-bottom: 2px solid #fff;
+      
+      .main-title{
+         color: $primary;
+      }
+      
+   }
+   
+   .left, .center, .right{
+      padding-top: $spaceBase * 2.5;
+      padding-bottom: $spaceBase * 2.5;
+      
+      img{ background: #fff; }
+      
+      .btn{
+         background: $secondary;
+         color: $light;
+         border: 1px solid #fff;
+      }
+      
+   }
+   
+   .left{
+      background: $primary;
+      color: #fff;
+      
+      h3{ color: #fff; }
+      
+   }
+   
+   .center{
+      background: #9fa508;
+      color: #fff;
+      
+      h3{ color: #fff; }
+      
+   }
+   
+   .right{
+      background: #4153a7;
+      color: #fff;
+      
+      h3{ color: #fff; }
+      
+   }
+   
+} // .who
+
+@media screen and (min-width: $media-tablet){
+   
+   .what{
+      
+      .center{
+         border-left: 1px solid #fff;
+         border-right: 1px solid #fff;
+      }
+      
+   }
+   
+} // @ min - custom tablet
+
+@media screen and (min-width: $media-desktop){
+   
+   .what{
+      
+      .left, .center, .right{
+         padding-left: $spaceBase * 3;
+         padding-right: $spaceBase * 3;
+      }
+      
+   }
+   
+} // @ min - custom desktop
+
+
+/*
+* PARALLAX DIVIDER
+*/
+
+.parallax-divider{
+   height: 10rem;
+   background: url('../img/home-div-2.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+} // .parallax-divider
+
+
+/*
+* NEWSLETTER
+*/
+
+.newsletter{
+   background: $secondaryLight;
+   background: url('../img/home-newsletter.jpg');
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   
+   &::after{
+      content: '';
+      width: 100%;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,.85);
+   }
+   
+   .container{ position: relative; z-index: 2; }
+   
+   .form{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+   
+   .check{
+      justify-content: center;
+
+      label{
+         border: 0;
+         color: $secondaryDark;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+   
+   .main-newsletter{
+      min-height: 40px;
+      flex: 1 1 0;
+      background: rgba(0,0,0,.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: $spaceBase;
+      border-radius: 8px;
+      position: relative;
+      
+      label{ color: $secondaryDark; }
+      
+      > div{
+         flex: 16rem 1 1;
+         margin: $spaceMin;
+      }
+      
+      input{ 
+         background: #fff;
+      }
+      
+   }
+   
+   .btn{
+      background: $primary;
+      color: #fff;
+      margin: $spaceBase;
+      text-transform: uppercase;
+   }
+   
+} // .newsletter
+
+.top__image{
+   width: 100%;
+   height: 20vh;
+   background: url('https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* CHI SIAMO
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.chi-siamo{
+   padding-top: 0;
+   .about{
+      
+      .skill{
+         padding: $spaceBase * 2;
+         display: flex;
+         align-items: center;
+         
+         .skill__icon{ flex: 30% 1 1; }
+         
+         .skill__text{ flex: 70% 1 1; }
+      
+      }
+      
+      .skill:nth-child(1){
+         background: lighten($primary,50);
+      }
+      
+      .skill:nth-child(2){
+         background: lighten($primary,46);
+      }
+      
+      .skill:nth-child(3){
+         background: lighten($primary,48);
+      }
+      
+      .skill:nth-child(4){
+         background: lighten($primary,44);
+      }
+      
+   }
+   
+} // .chi-siamo
+
+@media screen and (max-width: $media-smartphone){
+
+   .chi-siamo{
+
+      .about{
+   
+         .skill{
+            flex-direction: column;
+            text-align: center;
+         }
+         
+      }
+   
+   } // .chi-siamo
+
+} // @ max - custom smartphone
+
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* RISTRUTTURA POINT
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.ristruttura-point{
+   
+   .renovation{
+
+      ul{
+         
+         li{
+            margin-bottom: $spaceBase;
+            padding: $spaceMin $spaceHalf;
+            background: darken($light,2);
+         }
+         
+      }
+
+      .renovation__left{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      
+   } // .renovation
+   
+} // .valutazioni-gratuite
+
+
+@media screen and (max-width: $media-desktop - 1px){
+   
+   .renovation{
+   
+      .renovation__left{
+         
+         img{
+            width: 50%;
+            height: auto;
+            margin-bottom: 4rem;
+         }
+         
+      } // .renovation__left
+      
+      .renovation__right{
+         padding-top: 0!important;
+      } // .renovation__right
+   
+   } // .valutazioni-gratuite
+   
+} // @ smartphone
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* SERVIZI TECNICI
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.servizi-tecnici{
+   
+   .tec-services{
+      
+      img{ border-bottom: 2px solid $primary;}
+      
+      ul{
+         list-style: none;
+         
+         li{
+            margin-bottom: $spaceBase;
+            padding: $spaceMin $spaceHalf;
+            background: darken($light,2);
+         }
+         
+      }
+      
+   } // .tec-services
+   
+} // .servizi-tecnici
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* VENDI IMMOBILI
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.sell-property{
+
+   form .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+} // .sell-property
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* CONTATTI
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.places{
+   
+   div > p i{
+      width: 1.5rem;
+      color: $primary;
+   }
+   
+   ul{
+      list-style: none;
+      
+      li{
+         
+         i{
+            margin-right: $spaceMin;
+            color: $primary;
+            width: 1.25rem;
+         }
+         
+         a{
+            text-decoration: none;
+         }
+      
+      }
+      
+   }
+   
+   .maps{ border: 2px solid $secondaryLight; }
+   
+   
+} // .places
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* LAVORA CON NOI
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.lavora-con-noi{
+
+} // .lavora-con-noi
+
+.work{
+
+   ul{
+      padding-left: 1.5rem;
+
+      li{
+         margin: 1rem 0;
+      } // li
+      
+   } // ul
+
+} // .work
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* IMMOBILI IN VENDITA/AFFITTO
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.list-properties{
+   padding-bottom: 0;
+   
+   .listing-cards{
+      padding-top: 2rem;
+      padding-bottom: 5rem;
+      display: block;
+      
+      .slider{
+         background: none;
+         min-height: auto;
+         
+         .main-search{
+            background: none;
+            padding: 0;
+            
+            label{ color: $text-dark;}
+            
+            button[type="submit"]{
+               padding: .5rem .75rem;
+               font-size: .8rem;
+               height: auto;
+               bottom: -40px;
+            }
+            
+            .search-top .search-title{
+               padding: .4rem;
+            }
+               
+         } // .main-search
+            
+      } // .slider
+      
+   } // .listing-cards
+   
+   .advanced-search{ display: flex!important; }
+   
+} // .list-properties
+
+.search-filters{
+   background: $light;
+   .custom-select{ margin: 0; }
+
+   input,.custom-select{
+      margin-bottom: 0.5rem;
+   }
+
+   label{ color: $secondary; }
+   input{ background: #fff; }
+
+   .features, .search-btn{ margin-top: 1rem; }
+}
+
+
+.filters{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding: 1.5rem;
+
+   .custom-select{
+      width: 25%;
+      min-width: 14rem;
+
+      .select-selected{ width: 100%; }
+   }
+   
+   .more-filters{
+      display: inline-block;
+      cursor: pointer;
+      text-transform: uppercase;
+      padding: .5rem 1rem;
+      background: none;
+
+   } // .more-filters
+
+   .custom-select{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      flex: auto 0 0;
+      flex-wrap: wrap;
+      span{
+         padding: 0 1.1rem;
+      }
+   }
+   
+} // .filters
+
+.show{ display: block!important; }
+
+/*
+* Filtered properties
+*/
+
+.filtered-properties{
+
+   .main-title{
+      text-align: left;
+      border-bottom: 1px solid $secondaryLight;
+      padding-bottom: .5rem;
+      color: $secondary;
+      &::after{ display: none; }
+   }
+
+   .grid-row{
+
+      .grid-row{
+         margin-bottom: 1.5rem;
+         transition: all .5s;
+         position: relative;
+         border-bottom: 1px solid $light;
+      }
+      
+      &.list{
+         .owl-stage-outer{
+            max-height: 16rem;
+         }
+      }
+      
+      a{ text-decoration: none; }
+      
+      .owl-carousel .item{
+         height: 15rem;
+      }
+      
+      .card-img{
+         flex: 40% 1 1;         
+      } // .card-img
+      
+      .card-info{
+         padding: 1rem 0;
+         color: $text-dark;
+         
+         .card-title{
+            font-size: 1.25rem;
+            margin-bottom: .5rem;
+         }
+         
+         .card-details{
+            margin-bottom: 1rem;
+            line-height: 2rem;
+            
+            span{
+               border-right: 1px solid $light;
+               padding-right: 1rem;
+               margin-right: .5rem;
+            }
+            
+            span:last-child{
+               margin-right: 0;
+               padding-right: 0;
+               border-right: none;
+            }
+            
+            .price{
+               font-size: 1.2rem;
+               font-weight: 600;
+            } // .price
+            
+            .rooms{
+               &::before{
+                  content: 'Locali: ';
+               }
+            } // .rooms
+            
+            .size{
+               &::before{
+                  content: 'Mq: ';
+               }
+            } // .size
+            
+            .bath{
+               &::before{
+                  content: 'Bagni: ';
+               }
+            } // .size
+            
+         } // .card-details
+         
+      } // .card-info
+
+   } // .grid-row
+   
+      
+} // .filter-properties
+
+
+@media screen and (max-width: $media-desktop){
+
+   .filtered-properties{
+      .container{
+         width: 100%!important;
+      }
+   }
+
+}
+
+@media screen and (max-width: $media-tablet){
+
+   .filtered-properties{
+
+      .grid-row{
+   
+         .grid-row{
+            
+            .col-md-5{
+               padding-bottom: 0!important;
+            }
+
+         }
+
+      }
+
+   }
+
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* SCHEDA IMMOBILE
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.info__property{
+   display: flex;
+   margin-top: 4rem;
+   
+   .scheda{
+      flex: 75% 1 1;
+      
+      section{
+         padding: 2rem 0;
+      }
+      
+      .main-title{
+         text-align: left;
+         text-transform: initial;
+         color: $text-dark;
+         font-size: 1.2rem;
+         border-bottom: 1px solid $light;
+         padding-bottom: .5rem;
+         
+         &::after{
+            display: none;
+         }
+         
+      } // .main-title
+      
+      .scheda__gallery{
+         display: flex;
+         height: 40vh;
+         
+         .gallery__slider{
+            flex: 2;
+            height: 100%;
+            
+            img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               object-position: center;
+               border-right: 2px solid #fff;
+               display: block;
+            }
+            
+         } // .gallery__slider
+         
+         .gallery__static{
+            flex: 1;
+            display: flex;
+            flex-flow: column wrap;
+            
+            img{
+               width: 100%;
+               height: 50%;
+               object-fit: cover;
+               object-position: center;
+               display: block;
+               
+               &:first-child{
+                  border-bottom: 2px solid #fff;
+               }
+            }
+            
+         } // .gallery__static
+         
+      } // .scheda__gallery
+      
+      .scheda__icons{
+         display: flex;
+         align-items: center;
+         flex-flow: row wrap;
+         justify-content: space-between;
+         padding: 1rem 0;
+         
+         > div{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            
+            i{
+               color: $secondaryLight;
+               font-size: 1.5rem; 
+               margin-bottom: 0.5rem;
+            }
+            
+            span{ font-size: 0.9rem; }
+            
+         }
+         
+      } // .scheda__icons
+      
+      .card-info{
+         padding: 2rem 0 1rem;
+         color: $text-dark;
+         border-top: 1px solid $light;
+         
+         .card-title{
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+         }
+            
+         .card-details{
+            margin-bottom: 3rem;
+            line-height: 2rem;
+            
+            span{
+               border-right: 1px solid $light;
+               padding-right: 1rem;
+               margin-right: .5rem;
+            }
+            
+            span:last-child{
+               margin-right: 0;
+               padding-right: 0;
+               border-right: none;
+            }
+            
+            .price{
+               font-size: 1.2rem;
+               font-weight: 600;
+            } // .price
+            
+            .rooms{
+               &::before{
+                  content: 'Locali: ';
+               }
+            } // .rooms
+            
+            .size{
+               &::before{
+                  content: 'Mq: ';
+               }
+            } // .size
+            
+            .bath{
+               &::before{
+                  content: 'Bagni: ';
+               }
+            } // .bath
+            
+            .rif{
+               &::before{
+                  content: 'Rif: ';
+               }
+            } // .size
+            
+         } // .card-details
+         
+      } // .card-info
+      
+      .caratteristiche{
+         
+         table{
+            width: 100%;
+            
+            tr{
+               padding: 0.75rem;
+               border-bottom: 2px solid #fff;
+               
+               td{ padding: .75rem; }
+            }
+            
+            tr:nth-child(odd){
+               background: lighten($light,4);
+            }
+            tr:nth-child(even){
+               background: lighten($light,2);
+            }
+            
+            tr td:first-child{
+               display: block;
+               margin-right: 1rem;
+               font-weight: 500;
+            }
+            
+         } // table
+         
+      } // .caratteristiche
+      
+      .dettagli{
+         
+         ul{
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+            
+            li{
+               padding: .5rem;
+               background: $light;
+               margin-right: 0.75rem;
+               
+               &:last-child{ margin-right: 0; }
+            
+            }
+            
+         }
+         
+      } // .dettagli
+      
+      .energia{
+         
+         ul{
+            display: flex;
+            
+            li{
+               padding: .5rem 1rem;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex: 1;
+               color: #fff;
+               
+               &:nth-child(1){ background: #6d9e00; }
+               &:nth-child(2){ background: #7fb800; }
+               &:nth-child(3){ background: #92d100; }
+               &:nth-child(4){ background: #ecc400; }
+               &:nth-child(5){ background: #ec9c00; }
+               &:nth-child(6){ background: #e67205; }
+               &:nth-child(7){ background: #d22502; }
+               &:nth-child(8){ background: #b90101; }
+               
+            }
+            
+         }
+
+         .energy-val{
+            padding: .5rem;
+            margin-top: 1rem;
+         }
+         
+      } // .energia
+      
+      /*
+      * Planimetrie
+      */
+      
+      .planimetrie{
+         img{
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            object-position: center;
+         }
+      }
+
+      .mutuo{
+
+         label{ color: $text-dark; }
+         input{ margin-bottom: 1rem; }
+
+         .preventivo-mutuo{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: $light;
+            margin-top: 1rem;
+            border-left: 5px solid $primary;
+
+            a{ text-decoration: none; }
+
+            p{
+               flex: 60% 1 0;
+               margin-bottom: 0;
+               margin: 1rem 2rem 1rem 0;
+            }
+            button{
+               flex: 40% 1 0;
+               margin: .5rem 0
+            }
+         }
+      }
+      
+   } // .scheda
+   
+   .contatti{
+      flex: 25% 1 1;
+      margin-bottom: 3rem;
+      
+      .scheda__form-title{
+         padding: 0.5rem 1rem;
+         background: $light;
+         margin-bottom: 0;
+         color: $text-dark;
+         font-size: 1rem;
+         border-left: 2px solid $secondary;
+         border-bottom: 0;
+         text-transform: uppercase;
+         font-weight: 500;
+      }
+
+      .tel-us{
+         margin: 1.5rem;
+         padding: .5rem 1rem;
+         font-size: 1.25rem;
+         font-weight: 500;
+         width: 100%;
+         text-align: center;
+         display: block;
+         color: $secondary;
+         text-decoration: none;
+         border: 1px solid $secondary;
+      }
+      
+      form{
+         // background: lighten($light,4);
+         border: 1px solid $light;
+      }
+      
+   } // .contatti
+   
+} // .info__property
+
+/*
+* Media query
+*/
+
+@media screen and (max-width: $media-tablet){
+   
+   .info__property{
+      
+      .scheda{
+         
+         .scheda__gallery{
+            
+            .gallery__slider{
+               
+               img{
+                  
+               } // img
+               
+            } // .gallery__slider
+            
+            .gallery__static{
+               
+               img{
+                  
+               } // img
+               
+            } // .gallery__static
+            
+         } // .scheda__gallery
+         
+      } // .scheda
+      
+      .scheda__icons{
+         
+         > div{
+            
+            span{ display: none; }
+            
+            i{
+               color: $secondaryLight;
+               font-size: 1.5rem; 
+               margin-bottom: 0.5rem;
+            }
+            
+         }
+         
+      } // .scheda__icons
+      
+      .scheda__contatti{
+         
+      } // .contatti
+   
+   } // .info__property
+
+} // @ tablet
+
+
+
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* F O O T E R
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+footer{
+   background: $secondaryDark;
+   color: #fff;
+   display: flex;
+   flex-flow: column wrap;
+   align-items: center;
+   justify-content: center;
+   
+   .footer__menu ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+      li{ list-style: none; }
+      
+      a{
+         color: #fff;
+         margin: $spaceBase;
+         display: inline-block;
+         text-transform: uppercase;
+         font-size: .8rem;
+      }
+      
+   }
+   
+   .footer__social ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+      li{ list-style: none; }
+      
+      a{
+         color: #fff;
+         margin: $spaceBase;
+         display: inline-block;
+         text-transform: uppercase;
+         font-size: 2rem;
+      }
+      
+   }
+   
+}
+
+
+@media screen and (max-width: $media-smartphone){
+   
+   .footer__menu ul{
+      flex-direction: column;
+   }
+   
+} // @ smartphone

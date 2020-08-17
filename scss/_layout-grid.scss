@@ -1,0 +1,239 @@
+/*
+* //////////////////////////////////////////////////
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* L A Y O U T   G R I D
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+* //////////////////////////////////////////////////
+*/
+
+
+body, html{ width: 100%; height: 100vh; }
+
+
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* C O N T A I N E R
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+.container{ width: $max-width; margin: 0 auto; }
+.container-full{ width: 100%; }
+.container-dev{ width: 100%; height: 100vh; }
+
+
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* G R I D
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+.grid-row{
+   width: 100%;
+   display: flex; flex-flow: row wrap;
+   
+   &.gutter-0{ 
+      
+      [class*="col"]{
+         padding-left: 0;
+         padding-right: 0;
+      }
+      
+      &.limit .col{
+         min-width: 100% / $max-columns;
+         flex-basis: 280px;
+      }
+      
+   } // .gutter-0
+   
+   &.limit .col{
+      min-width: 100% / $max-columns;
+      flex-basis: 280px;
+   }
+   
+} // grid-row
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* COLUMNS WIDTH
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+.grid-row [class*="col-"]{
+   padding: $gutter / 2;
+   position: relative;
+   width: 100%;
+}
+
+.grid-row .col{
+   flex: 1;
+   padding: $gutter / 2;
+}
+
+
+/*
+* Standard deviced columns
+*/
+
+@for $i from 1 through 12{
+   .grid-row > div.col-#{$i}{
+      width: calc((100% / 12) * #{$i});
+   }
+}
+
+
+/*
+* Small deviced columns
+*/
+
+@media screen and (min-width: $media-smartphone){
+   @for $i from 1 through 12{
+      .grid-row > div.col-sm-#{$i}{
+      width: calc((100% / 12) * #{$i});
+      }
+   }
+}
+
+
+/*
+* Medium deviced columns
+*/
+
+@media screen and (min-width: $media-tablet){
+   @for $i from 1 through 12{
+      .grid-row > div.col-md-#{$i}{
+         width: calc((100% / 12) * #{$i});
+      }
+   }
+}
+
+
+/*
+* Large deviced columns
+*/
+
+@media screen and (min-width: $media-desktop){
+   @for $i from 1 through 12{
+      .grid-row > div.col-lg-#{$i}{
+         width: calc((100% / 12) * #{$i});
+      }
+   }
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* PUSH
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+/*
+* Standard deviced columns
+*/
+
+@for $i from 1 through 12{
+   .push-#{$i}{
+      left: calc((100% / 12) * #{$i});
+   }
+}
+
+
+/*
+* Small deviced columns
+*/
+
+@media screen and (min-width: $media-smartphone){
+   @for $i from 1 through 12{
+      .push-sm-#{$i}{
+         left: calc((100% / 12) * #{$i});
+      }
+   }
+}
+
+
+/*
+* Medium deviced columns
+*/
+
+@media screen and (min-width: $media-tablet){
+   @for $i from 1 through 12{
+      .push-md-#{$i}{
+         left: calc((100% / 12) * #{$i});
+      }
+   }
+}
+
+
+/*
+* Large deviced columns
+*/
+
+@media screen and (min-width: $media-desktop){
+   @for $i from 1 through 12{
+      .push-lg-#{$i}{
+         left: calc((100% / 12) * #{$i});
+      }
+   }
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* PULL
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+/*
+* Standard deviced columns
+*/
+
+@for $i from 1 through 12{
+   .pull-#{$i}{
+      right: calc((100% / 12) * #{$i});
+   }
+}
+
+
+/*
+* Small deviced columns
+*/
+
+@media screen and (min-width: $media-smartphone){
+   @for $i from 1 through 12{
+      .pull-sm-#{$i}{
+         right: calc((100% / 12) * #{$i});
+      }
+   }
+}
+
+
+/*
+* Medium deviced columns
+*/
+
+@media screen and (min-width: $media-tablet){
+   @for $i from 1 through 12{
+      .pull-md-#{$i}{
+         right: calc((100% / 12) * #{$i});
+      }
+   }
+}
+
+
+/*
+* Large deviced columns
+*/
+
+@media screen and (min-width: $media-desktop){
+   @for $i from 1 through 12{
+      .pull-lg-#{$i}{
+         right: calc((100% / 12) * #{$i});
+      }
+   }
+}

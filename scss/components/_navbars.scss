@@ -1,0 +1,385 @@
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* N A V B A R
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+.topbar{
+   background: $primary;
+   padding-right: 0;
+   position: fixed;
+   width: 100%;
+   z-index: 999;
+   
+   // > ul li:nth-child(even){ display: none; }
+
+   > ul{
+      display: flex;
+      list-style: none;
+      justify-content: flex-end;
+
+      li{
+         
+         a{
+            padding:  $spaceMin $spaceBase;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 400;
+
+            i{ padding: 0 $spaceMin; font-size: 1.2rem; }
+
+         }
+
+         &:last-child{
+            border-left: 1px solid darken($primary,10);
+         }
+
+         &.active{ background: darken($primary,5); }
+
+      } // li
+
+   } // li
+
+} // .topbar
+
+.navbar {
+   padding: 0 1rem;
+   background: $secondary;
+   position: relative;
+   display: flex;
+   align-items: center;
+   border-bottom: 2px solid $light;
+   position: fixed;
+   top: 1.75rem;
+   z-index: 999;
+   
+   .navbar__brand {
+      padding: $spaceBase 0;
+      flex: 80% 0 1;
+      
+      a{
+         color: $light;
+         
+         img{
+            max-width: 50%;
+         }
+      }
+      
+   }
+
+   .navbar__menu {
+      width: 100%;
+      
+      > ul {
+         display: none;
+         padding: 0;
+         position: absolute;
+         background: $secondaryDark;
+         width: 100%;
+         left: 0;
+         top: 100%;
+         z-index: 999;
+         border-bottom: 2px solid $primary;
+      }
+      
+      ul {
+         list-style: none;
+         
+         li {
+            position: relative;
+
+            &.active{ background: lighten($secondaryDark,2); }
+            
+            > a {
+               display: block;
+               padding: $spaceBase;
+               font-size: .8rem;
+               font-weight: 400;
+               text-decoration: none;
+               transition: all 0.15s ease-in-out;
+               color: $light;
+               text-transform: uppercase;
+               
+            }
+            
+         }
+         
+         ul {
+               
+            li {
+               background-color: darken($secondaryDark,5);
+               
+               > a {
+                  padding: .9em 1rem;
+               }
+
+               ul {
+               
+                  li {
+                     background-color: darken($secondaryDark,8);
+                  }
+               
+               }
+               
+            }
+            
+            ul li > a {
+               padding: .9em 1rem;
+            }
+         
+         }
+         
+      }
+      
+      li > ul {
+         display: none;
+      }
+      
+   }
+
+}
+
+.navbar__fast-contact{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 4rem;
+   cursor: pointer;
+   width: auto;
+   height: auto;
+   z-index: 2;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+   > div{
+      display: flex;
+      justify-content: space-center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: $light;
+      padding: $spaceBase;
+   }
+   
+}
+
+.navbar__navicon {
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   z-index: 2;
+   color: $light;
+   font-size: 1.5rem;
+   
+}
+
+.dropdown-plus {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   right: 1rem;
+   width: 100%;
+   height: 46px;
+   // line-height: 50px;
+   
+   &::after, &::before {
+      position: absolute;
+      top: 24px;
+      right: $spaceHalf;
+      width: 12px;
+      height: 2px;
+      content: "";
+      background-color: $light;
+   }
+   
+   &::after {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+   }
+   
+   &.dropdown-open::after {
+      display: none;
+   }
+
+}
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* MEDIA QUERY
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+@media (min-width: $media-desktop) {
+
+   .topbar{
+      padding: 0 $spaceBase;
+
+      > ul li a{ padding: $spaceMin $spaceBase; }
+
+   }
+
+   .navbar {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+         
+      .navbar__brand {
+         float: left;
+         padding: $spaceBase 0;
+         max-width: 13%;
+         position: absolute;
+         // top: .05rem;
+         top: -1.65rem;
+         z-index: 1;
+
+         a{
+
+            img{
+               max-width: 100%;
+            }
+
+         }
+
+      }
+      
+      .navbar__navicon {
+         display: none;
+      }
+      
+      .navbar__menu {
+         
+         &:after{
+            content: "";
+            display: table;
+            clear: both;
+         }
+         
+         > ul {
+            padding: 0;
+            font-size: 0;
+            position: initial;
+            display: flex!important;
+            justify-content: flex-end;
+            background: $secondary;
+            border-bottom: none;
+            
+            > .dropdown_menu {
+
+               a{ padding-right: 2.2rem; }
+               
+               &::after {
+                  content: '\f078';
+                  font-family: 'Font Awesome 5 Free';
+                  font-size: .7rem;
+                  font-weight: 600;
+                  position: absolute;
+                  top: 50%;
+                  right: 1rem;
+                  transform: translateY(-50%);
+                  color: $light;
+                  font-size: .7rem;
+               }
+            }
+            
+            > li {
+               display: inline-block;
+
+               &:hover{
+                  background: rgba(0,0,0,.1);
+               }
+               
+               > a {
+                  position: relative;
+                  padding: .9rem 1.25rem;
+                  line-height: 3rem;
+                  white-space: nowrap;
+               }
+            
+            }
+            
+         }
+         
+         ul {
+            
+            li {
+               position: relative;
+               &.dropdown_menu > a > span {
+                  display: none;
+               }
+            }
+
+            ul li:hover{
+               background: darken($secondaryDark,5);
+            }
+            
+            ul li > a {
+               position: relative;
+               padding: .9rem;
+            }
+         }
+         
+         li {
+            
+            > ul {
+               background: #F8F9FA;
+               position: absolute;
+               top: 100%;
+               left: 0;
+               display: block !important;
+               width: 250px;
+               visibility: hidden;
+               opacity: 0;
+               transition: all 0.15s ease-in-out;
+               z-index: 2;
+               
+               ul {
+                  top: 0;
+                  left: 100%;
+               }
+               
+               > .dropdown_menu {
+                  
+                  &::after {
+                     transform: rotate(-45deg);
+                     -webkit-transform: rotate(-45deg);
+                     border: solid #c1c1c1;
+                     border-width: 0 3px 3px 0;
+                     padding: 2px;
+                     content: '';
+                     margin-bottom: 3px;
+                     text-align: right;
+                     position: absolute;
+                     right: 27px;
+                     top: 19px;
+                  }
+               
+               }
+               
+            }
+            
+            &:hover > ul {
+               opacity: 1;
+               visibility: visible;
+            }
+            
+         }
+         
+      }
+      
+   }
+   
+   .dropdown-plus {
+      display: none;
+   }
+
+   .navbar__fast-contact{
+      display: none;
+   }
+   
+}

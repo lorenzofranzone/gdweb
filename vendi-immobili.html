@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gruppo Dellerba - Servizi immobiliari a Imperia</title>
+   
+   <!-- JQuery CDN -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+   
+   <!-- FontAwesome CDN -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+   
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/app.min.css">
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+   <!-- HEADER -->
+   <header>
+      <!-- Topbar -->
+      <div class="topbar">
+         <ul>
+            <li><a href="lavora-con-noi.html">Lavora con noi</a></li>
+            <li><a href="dellerba-true-love.html">Dellerba True Love</a></li>
+         </ul>
+      </div>
+      <!-- Navbar -->
+      <div class="navbar container-full">
+         
+         <!-- Logo -->
+         <div class="navbar__brand">
+            <a href="index.html"><img src="img/gruppo-dellerba-marchio.png" alt="Gruppo Dellerba marchio"></a>
+         </div> <!-- .logo -->
+         
+         <!-- Navbar -->
+         <nav class="navbar__menu">
+            <ul>
+               <li><a href="chi-siamo.html">Chi siamo</a></li>
+               <li>
+                  <a href="#">Cosa offriamo</a>
+                  <ul>
+                     <li><a href="per-chi-vende.html">Per chi vende</a></li>
+                     <li><a href="per-chi-compra.html">Per chi compra</a></li>
+                     <li><a href="valutazioni-gratuite.html">Valutazioni gratuite</a></li>
+                     <li>
+                        <a href="#">Servizi integrati</a>
+                        <ul>
+                           <li><a href="ristruttura-point.html">Ristruttura Point</a></li>
+                           <li><a href="servizi-tecnici.html">Servizi tecnici</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#">Ricerca immobili</a>
+                  <ul>
+                     <li><a href="immobili-in-vendita.html">Immobili in vendita</a></li>
+                     <li><a href="immobili-in-affitto.html">Immobili in affitto</a></li>
+                  </ul>
+               </li>
+               <li class="active"><a href="vendi-immobili.html">Vendi immobili</a>
+               <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+         </nav> <!-- .navbar__menu -->
+
+         <!-- Fast contact -->
+         <div class="navbar__fast-contact">
+            <div class="navbar__fast-contact__tel">
+               <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="navbar__fast-contact__tel">
+               <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="navbar__fast-contact__tel">
+               <i class="fas fa-envelope"></i>
+            </div>
+         </div><!-- .navbar__fast-contact -->
+         
+         <!-- Navicon -->
+         <div class="navbar__navicon">
+            <i class="fas fa-bars"></i>
+         </div><!-- .navbar__navicon -->
+         
+      </div> <!-- .navbar -->
+      <div class="header__image">
+         <img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="">
+      </div>
+   </header>
+
+   <!-- MAIN -->
+   <main class="vendi-immobili">
+      
+      <div class="grid-row txt-center pt-4 pb-2">
+         <div class="col-md-8 push-md-2">
+            <h1 class="main-title">Proponici il tuo immobile</h1>
+            <p>Compila il seguente form per richiedere la valutazione gratuita del tuo immobile.</p>
+         </div>
+      </div>
+
+      <!-- how -->
+      <section class="sell-property pt-0">
+         <!-- <div class="container"> -->
+            <form action="">
+               <div class="container">
+                  <div class="grid-row limit pt-3">
+                     <div class="col">
+                        <div class="custom-select">
+                           <select name="contratto" id="contratto">
+                              <option value="">Contratto*</option>
+                              <option value="">Opzione</option>
+                              <option value="">Opzione</option>
+                           </select>
+                        </div>
+                        <div class="custom-select">
+                           <select name="contratto" id="contratto">
+                              <option value="">Tipologia*</option>
+                              <option value="">Opzione</option>
+                              <option value="">Opzione</option>
+                           </select>
+                        </div>
+                        <div class="locali mx-1">
+                           <input type="text" name="locali" placeholder="Numero locali*">
+                        </div>
+                        <div class="citta mx-1">
+                           <input type="text" name="citta" placeholder="Città*">
+                        </div>
+                        <div class="indirizzo mx-1">
+                           <input type="text" name="indirizzo" placeholder="Indirizzo*">
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="nome mx-1">
+                           <input type="text" name="nome" placeholder="Nome*">
+                        </div>
+                        <div class="cognome mx-1">
+                           <input type="text" name="cognome" placeholder="Cognome*">
+                        </div>
+                        <div class="email mx-1">
+                           <input type="email" name="email" placeholder="Email*">
+                        </div>
+                        <div class="Telefono mx-1">
+                           <input type="tel" name="Telefono" placeholder="Telefono*">
+                        </div>
+                        <div class="note mx-1">
+                           <textarea name="note" placeholder="Note"></textarea>
+                        </div>
+                     </div>  
+                  </div>
+                  <div class="grid-row">
+                     <div class="col-12">
+                        <p class="txt-note m-0">Acconsento al trattamento dei miei Dati secondo le modalità e le finalità illustrate nell'Informativa sul Trattamento dei Dati personali (Regolamento (UE) 2016/679 - GDPR). Essi saranno utilizzati esclusivamente per rispondere a richieste individuali.</p>
+                     </div>
+                     <div class="col pt-0">
+                        <div class="check">
+                           <input type="checkbox" name="tdp" id="">
+                           <label for="tdp">Acconsento *</label>
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <p class="txt-note m-0">Acconsento al trattamento dei miei Dati per ricevere informazioni sugli immobili compatibili con la mia richiesta.</p>
+                     </div>
+                     <div class="col pt-0">
+                        <div class="check">
+                           <input type="checkbox" name="tdp" id="">
+                           <label for="tdp">Acconsento</label>
+                        </div>
+                     </div>
+                  </div>
+                  <button type="submit" class="btn primary rad-1 icon-left ml-auto mt-2"><i class="fas fa-home"></i>Richiedi una valutazione gratuita</button>
+               </div>
+            </form>
+         </div>
+      </section> <!-- valutazioni gratuite -->
+      
+   </main>
+
+   <!-- FOOTER -->
+   <footer class="px-2 py-3">
+      <div class="footer__social">
+         <ul>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+         </ul>
+      </div>
+      <div class="footer__menu">
+         <ul>
+            <li><a href="#">Dati societari</a></li>
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+         </ul>
+      </div>
+      <p class="txt-note txt-center mt-2">© Copyright 2020 - Gruppo Dellerba s.r.l. Unipersonale | P.Iva 01287930083</p>
+   </footer>
+
+
+   <!-- SCRIPT -->
+   <script src="js/_navbar.js"></script>
+   <script src="js/_forms.js"></script>
+   
+</body>
+</html>

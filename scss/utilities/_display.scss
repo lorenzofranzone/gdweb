@@ -1,0 +1,68 @@
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* D I S P L A Y
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+
+.d-none{ display: none!important; }
+.d-block{ display: block!important; }
+.d-inline-block{ display: inline-block!important; }
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* MEDIA QUERY VISIBILITY
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+
+/*
+* Up to small devices
+*/
+
+@media screen and (max-width: $media-smartphone){
+  .d-xs-none{ display: none!important; }
+  .d-xs-block{ display: block!important; }
+}
+
+
+/*
+* From small devices
+*/
+
+@media screen and (min-width: $media-smartphone){
+  .d-sm-none{ display: none!important; }
+  .d-sm-block{ display: block!important; }
+}
+
+
+/*
+* From small devices
+*/
+
+@media screen and (min-width: $media-tablet){
+  .d-md-none{ display: none!important; }
+  .d-md-block{ display: block!important; }
+} // Medium Devices
+
+
+/*
+* From large devices
+*/
+
+@media screen and (min-width: $media-desktop){
+  .d-lg-none{ display: none!important; }
+  .d-lg-block{ display: block!important; }
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* F L E X B O X
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+

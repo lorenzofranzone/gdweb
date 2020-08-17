@@ -1,0 +1,95 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// V A R I A B L E S
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// C O L O R S
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+//
+//  Here you can setup the default colors
+//  of your website 
+//
+//
+
+$primary: #ee7003;
+$primaryLight: lighten($primary,45);
+$primaryDark: darken($primary,35);
+
+$secondary: #545454;
+$secondaryLight: lighten($secondary,45);
+$secondaryDark: darken($secondary,10);
+
+$light: #EEEEEE;
+$lightLight: lighten($light,45);
+$lightDark: darken($light,35);
+
+$text-dark: $secondaryDark;
+$text-light: #FFF;
+$heading-color: $primary;
+$link-color: darken($primary,5);
+
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// T Y P O G R A P H Y
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+//
+//  Here you can setup the default typography
+//  of your website 
+//
+//
+
+$primaryFont: 'Open Sans', sans-serif;    // default primary font
+$secondaryFont: 'Open Sans', sans-serif;  // default secondary font
+$fontBaseSize: 14px;
+$lineHeight: 130%;
+
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// L A Y O U T
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+//
+//  Here you can setup the default layout
+//  of your website
+//
+//
+
+
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// GRID SYSTEM
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+
+$max-width: 80%;  // container max-width
+$gutter: 32px;    // columns gutter
+$max-columns: 4;  // max number of auto-columns
+
+
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// MEDIA QUERY
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+
+$media-desktop: 992px;     // Desktop devices breakpoint
+$media-tablet: 768px;      // Tablet devices breakpoint
+$media-smartphone: 576px;  // Smartphones devices breakpoint

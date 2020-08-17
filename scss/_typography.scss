@@ -1,0 +1,179 @@
+/*
+* //////////////////////////////////////////////////
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* T Y P O G R A P H Y
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+* //////////////////////////////////////////////////
+*/
+
+
+$fontMinSize: $fontBaseSize - 2;
+
+:root{
+   font-family: 'Open Sans', sans-serif;
+   // font-size: clamp($fontMinSize, 0.91324vw, 1vw);
+   font-size: clamp($fontMinSize, 0.75vw, 1vw);
+   line-height: $lineHeight;
+   color: $text-dark;
+   font-weight: 300;
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* HEADINGS
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+h1{ 
+   font-family: $secondaryFont;
+   font-size: 1.6rem;
+   line-height: 120%;
+   font-weight: 300;
+   margin-bottom: 2rem;
+   // ##################################################
+   color: $heading-color;
+   // ##################################################
+}
+
+h2{ 
+   font-family: $secondaryFont;
+   font-size: 1.4rem;
+   line-height: 120%;
+   font-weight: 300;
+   margin-bottom: 2rem;
+   // ##################################################
+   color: $heading-color;
+   // ##################################################
+}
+
+h3{ 
+   font-family: $secondaryFont;
+   font-size: 1.3rem;
+   line-height: 120%;
+   font-weight: 300;
+   margin-bottom: 1.5rem;
+   // ##################################################
+   color: $heading-color;
+   // ##################################################
+}
+
+h4{ 
+   font-family: $secondaryFont;
+   font-size: 1.25rem;
+   line-height: 120%;
+   font-weight: 300;
+   margin-bottom: 1rem;
+   // ##################################################
+   color: $heading-color;
+   // ##################################################
+}
+
+h5{ 
+   font-family: $secondaryFont;
+   font-size: 1.15rem;
+   line-height: 120%;
+   font-weight: 300;
+   margin-bottom: 0.6rem;
+   // ##################################################
+   color: $heading-color;
+   // ##################################################
+}
+
+h6{ 
+   font-family: $secondaryFont;
+   font-size: 1rem;
+   line-height: 120%;
+   font-weight: 200;
+   margin-bottom: 0.4rem;
+   // ##################################################
+   color: $heading-color;
+   // ##################################################
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* TEXT
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+p{
+   margin-bottom: 1.2rem;
+   
+   /*
+   * Links
+   */
+   
+   // ##################################################
+   a, a:link, a:focus, a:active, a:visited{
+      color: $link-color;
+   }
+   // ##################################################
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* CODE
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+pre, code, kbd, samp, xmp{
+   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+   white-space: pre-wrap;
+   overflow-x: auto;
+}
+
+xmp{
+   white-space: pre-line;
+   background: grey;
+   padding: 1rem;
+   position: relative;
+   
+   &:before{
+      content: '';
+      width: 10rem;
+      height: .1rem;
+      background: $primary;
+      display: block;
+   }
+   
+}
+
+
+/*
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* T Y P O G R A P H Y   U T I L I T I E S
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+*/
+
+
+.txt-lower{ text-transform: lowercase; }
+.txt-capital{ text-transform: capitalize; }
+.txt-upper{ text-transform: uppercase; }
+.txt-smallcaps{ font-variant: small-caps; }
+
+.txt-lead{
+   font-size: 1.2rem;
+   line-height: 130%;
+}
+
+.txt-small{
+   font-size: .9rem;
+   line-height: 130%;
+}
+
+.txt-note{
+   font-size: .75rem;
+   line-height: 130%;
+}
+
+.txt-left{ text-align: left; }
+.txt-right{ text-align: right; }
+.txt-center{ text-align: center; }
+.txt-just{ text-align: justify; }

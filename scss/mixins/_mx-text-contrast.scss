@@ -1,0 +1,19 @@
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* TEXT CONTRAST
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+
+@mixin text-contrast($n) {
+   $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+   $light-color: round((red(#FFFFFF) * 299) + (green(#FFFFFF) * 587) + (blue(#FFFFFF) * 114) / 1000);
+   
+   @if abs($color-brightness) < ($light-color/2){
+      color: $text-light;
+   }
+   
+   @else {
+      color: $text-dark;
+   }
+}

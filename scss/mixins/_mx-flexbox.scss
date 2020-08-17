@@ -1,0 +1,32 @@
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* FLEXBOX MIXINS
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+
+@mixin flex-x--center-xy{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin flex-y--center-xy{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin flex-x-sb-center{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+@mixin flex-y-center-sb{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}

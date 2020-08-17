@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gruppo Dellerba - Servizi immobiliari a Imperia</title>
+   
+   <!-- JQuery CDN -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+   
+   <!-- FontAwesome CDN -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+   
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/app.min.css">
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+   <!-- HEADER -->
+   <header class="no-print">
+      <!-- Topbar -->
+      <div class="topbar">
+         <ul>
+            <li><a href="lavora-con-noi.html">Lavora con noi</a></li>
+            <li><a href="dellerba-true-love.html">Dellerba True Love</a></li>
+         </ul>
+      </div>
+      <!-- Navbar -->
+      <div class="navbar container-full">
+         
+         <!-- Logo -->
+         <div class="navbar__brand">
+            <a href="index.html"><img src="img/gruppo-dellerba-marchio.png" alt="Gruppo Dellerba marchio"></a>
+         </div> <!-- .logo -->
+         
+         <!-- Navbar -->
+         <nav class="navbar__menu">
+            <ul>
+               <li><a href="chi-siamo.html">Chi siamo</a></li>
+               <li>
+                  <a href="#">Cosa offriamo</a>
+                  <ul>
+                     <li><a href="per-chi-vende.html">Per chi vende</a></li>
+                     <li><a href="per-chi-compra.html">Per chi compra</a></li>
+                     <li><a href="valutazioni-gratuite.html">Valutazioni gratuite</a></li>
+                     <li>
+                        <a href="#">Servizi integrati</a>
+                        <ul>
+                           <li><a href="ristruttura-point.html">Ristruttura Point</a></li>
+                           <li><a href="servizi-tecnici.html">Servizi tecnici</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#">Ricerca immobili</a>
+                  <ul>
+                     <li><a href="immobili-in-vendita.html">Immobili in vendita</a></li>
+                     <li><a href="immobili-in-affitto.html">Immobili in affitto</a></li>
+                  </ul>
+               </li>
+               <li><a href="vendi-immobili.html">Vendi immobili</a>
+               <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+         </nav> <!-- .navbar__menu -->
+
+         <!-- Fast contact -->
+         <div class="navbar__fast-contact">
+            <div class="navbar__fast-contact__tel">
+               <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="navbar__fast-contact__tel">
+               <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="navbar__fast-contact__tel">
+               <i class="fas fa-envelope"></i>
+            </div>
+         </div><!-- .navbar__fast-contact -->
+         
+         <!-- Navicon -->
+         <div class="navbar__navicon">
+            <i class="fas fa-bars"></i>
+         </div><!-- .navbar__navicon -->
+         
+      </div> <!-- .navbar -->
+   </header>
+
+   <!-- MAIN -->
+   <main>
+      <!-- slider + advanced search -->
+      <div class="slider no-print">
+         <div class="container">
+            <form action="">
+               <div class="main-search">
+                  <div class="search-top">
+                     <h1 class="search-title">
+                        Cerca la tua casa ideale
+                     </h1>
+                  </div>
+                  <!-- General -->
+                  <div class="flex-search-1">
+                     <div class="custom-select">
+                        <label for="contratto">Contratto</label>
+                        <select name="contratto" id="contratto">
+                           <option value="Vendita">Vendita</option>
+                           <option value="Affitto">Vendita</option>
+                           <option value="Test">Affitto</option>
+                        </select>
+                     </div>
+                     <div class="comune">
+                        <label for="comune">Comune / Zona</label>
+                        <input type="text" name="comune" placeholder="Inserisci il comune">
+                     </div>
+                     <div class="custom-select">
+                        <label for="immobile">Tipologia</label>
+                        <select name="immobile" id="immobile">
+                           <option value="">Tipologia</option>
+                           <option value="Appartamento">Appartamento</option>
+                           <option value="Garage / Posto auto">Garage / Posto auto</option>
+                        </select>
+                     </div>
+                  </div>
+                  <!-- Details -->
+                  <div class="flex-search-2">
+                     <div class="price">
+                        <label for="price-min">Prezzo min</label>
+                        <input list="pricemin" id="price-min" name="price-min" placeholder="€ Min" />
+                        <datalist id="pricemin">
+                           <option value="€100.000">
+                           <option value="€200.000">
+                           <option value="€300.000">
+                           <option value="€400.000">
+                           <option value="Indifferente"></option>
+                        </datalist>
+                     </div>
+                     <div class="price">
+                        <label for="price-max">Prezzo max</label>
+                        <input list="pricemax" id="price-max" name="price-max" placeholder="€ Max" />
+                        <datalist id="pricemax">
+                           <option value="€100.000">
+                           <option value="€200.000">
+                           <option value="€300.000">
+                           <option value="€400.000">
+                           <option value="Indifferente"></option>
+                        </datalist>
+                     </div>
+                     <div class="rifer">
+                        <label for="rif">Rif</label>
+                        <input class="rif" type="text" name="rif" placeholder="Rif">
+                     </div>
+                  </div>
+
+                  <span class="search-custom mt-1 px-2">Ricerca avanzata</span>
+                  
+                  <!-- Advanced-search -->
+                  <div class="advanced-search">
+                     <div class="metratura">
+                        <label for="metratura">Mq max</label>
+                        <input type="text" name="metratura" placeholder="Mq Max">
+                     </div>
+                     <div class="locali">
+                        <label for="locali">N. Locali</label>
+                        <input type="text" name="locali" placeholder="N. Locali">
+                     </div>
+                     <div class="bagni">
+                        <label for="bagni">N. Bagni</label>
+                        <input type="text" name="bagni" placeholder="N. Bagni">
+                     </div>
+                     <div class="custom-select">
+                        <label for="stato">Piano</label>
+                        <select name="piano" id="piano">
+                           <option value="">Piano</option>
+                           <option value="">Terra</option>
+                           <option value="">Seminterrato</option>
+                        </select>
+                     </div>
+                     <div class="custom-select">
+                        <label for="stato">Stato immobile</label>
+                        <select name="stato" id="stato">
+                           <option value="">Condizioni</option>
+                           <option value="">Da ristrutturare</option>
+                           <option value="">Opzione</option>
+                        </select>
+                     </div>
+                     <div class="features">
+                        <div class="check">
+                           <input type="checkbox" name="box" id="">
+                           <label for="box">Box</label>
+                        </div>
+                        <div class="check">
+                           <input type="checkbox" name="balcone" id="">
+                           <label for="balcone">Balcone</label>
+                        </div>
+                        <div class="check">
+                           <input type="checkbox" name="terrazzo" id="">
+                           <label for="terrazzo">Terrazzo</label>
+                        </div>
+                        <div class="check">
+                           <input type="checkbox" name="ascensore" id="">
+                           <label for="ascensore">Ascensore</label>
+                        </div>
+                        <div class="check">
+                           <input type="checkbox" name="giardino" id="">
+                           <label for="giardino">Giardino</label>
+                        </div>
+                        <div class="check">
+                           <input type="checkbox" name="arredato" id="">
+                           <label for="arredato">Arredato</label>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="search-btn">
+                     <button type="submit" class="btn primary m-0">CERCA</button>
+                  </div>
+                  
+               </div>
+            </form>
+         </div> <!-- .container -->
+      </div> <!-- .slider -->
+
+      <!-- featured properties -->
+      <section class="featured-properties px-2">
+         <div class="container-full">
+            <h1 class="main-title">Le nostre ultime proposte</h2>
+            <div class="listing-cards">
+               <div class="grid-row">
+                  <div class="col-md-6 col-lg-3">
+                     <a href="#"><div class="card-img new">
+                        <img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" class="fluid" alt="">
+                        <div class="card-type">Trilocale</div>
+                        <div class="card-price">€250.000</div>
+                     </div>
+                     <div class="card-icons">
+                        <div class="size">90</div>
+                        <div class="room">3</div>
+                        <div class="bath">1</div>
+                     </div></a>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                     <a href="#"><div class="card-img">
+                        <img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" class="fluid" alt="">
+                        <div class="card-type">Casa indipendente</div>
+                        <div class="card-price">€250.000</div>
+                     </div>
+                     <div class="card-icons">
+                        <div class="size">90</div>
+                        <div class="room">3</div>
+                        <div class="bath">1</div>
+                     </div></a>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                     <a href="#"><div class="card-img">
+                        <img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" class="fluid" alt="">
+                        <div class="card-type">Bilocale</div>
+                        <div class="card-price">€250.000</div>
+                     </div>
+                     <div class="card-icons">
+                        <div class="size">90</div>
+                        <div class="room">3</div>
+                        <div class="bath">1</div>
+                     </div></a>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                     <a href="#"><div class="card-img">
+                        <img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" class="fluid" alt="">
+                        <div class="card-type">Trilocale</div>
+                        <div class="card-price">€250.000</div>
+                     </div>
+                     <div class="card-icons">
+                        <div class="size">90</div>
+                        <div class="room">3</div>
+                        <div class="bath">1</div>
+                     </div></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- residenza Imperial -->
+      <section class="adv no-print">
+         <img class="adv__logo" src="img/residenza-imperial-logo.png" alt="">
+         <hr>
+         <h2 class="slogan">La tua <span>nuova casa</span><br>nel cuore di Imperia</h2>
+         <a href="http://www.residenzaimperial.it"><button class="btn-call rad-1 no-print">Scopri gli appartamenti ancora disponibili</button></a>
+      </section>
+
+      <!-- who -->
+      <section class="who">
+         <div class="container">
+            <h1 class="main-title">Professionisti dell'intermediazione immobiliare</h2>
+            <p class="txt-lead txt-center mb-4">Il Gruppo Dellerba è il punto di riferimento per l’immobiliare ad Imperia. È una struttura aziendale moderna, aggiornata e flessibile che fornisce servizi e consulenze altamente qualificati ed è presente sul mercato cittadino da più di vent’anni.</p>
+         </div>
+         <div class="container">
+            <div class="grid-row">
+               <div class="col-md-6 txt-center left">
+                  <img src="img/icons/buy-home-b.svg" class="w-30p rad-c mb-2" alt="">
+                  <h3>Vuoi comprare casa con noi?</h3>
+                  <p>Scegli un partner affidabile, sicuro e attento alle tue esigenze per acquistare il tuo immobile con la massima serenità.</p>
+                  <button class="btn rad-1 no-print">Scopri di più</button>
+               </div>
+               <div class="col-md-6 txt-center right">
+                  <img src="img/icons/sell-home-b.svg" class="w-30p rad-c mb-2" alt="">
+                  <h3>Vuoi comprare casa con noi?</h3>
+                  <p>Scegli un partner affidabile, sicuro e attento alle tue esigenze per acquistare il tuo immobile con la massima serenità.</p>
+                  <button class="btn rad-1 no-print">Scopri di più</button>
+               </div>
+            </div>
+         </div>
+      </section> <!-- who -->
+
+      <!-- parallax divider -->
+      <div class="parallax-divider"></div>
+      
+      <!-- what -->
+      <section class="what py-0">
+         <div class="container-full">
+            <div class="container-full top py-4">
+               <div class="container">
+                  <h1 class="main-title">Competenza e professionalità nell'intermediazione immobiliare e nei servizi integrati</h2>
+                  <p class="txt-lead txt-center">Il Gruppo Dellerba è un’azienda strutturata che, grazie alla collaborazione con i migliori professionisti del settore, offre servizi diversificati in tutti gli ambiti del settore immobiliare.</p>
+               </div>
+            </div>
+            <div class="container-full">
+               <div class="grid-row">
+                  <div class="col-md-4 txt-center left">
+                     <img src="img/icons/intermediazione-b.svg" class="w-30p rad-c mb-2" alt="">
+                     <h3>Intermediazione immobiliare</h3>
+                     <p>Scegli un partner affidabile, sicuro e attento alle tue esigenze per acquistare il tuo immobile con la massima serenità.</p>
+                     <button class="btn rad-1 no-print">Scopri di più</button>
+                  </div>
+                  <div class="col-md-4 txt-center center">
+                     <img src="img/icons/ristrutturazione-b.svg" class="w-30p rad-c mb-2" alt="">
+                     <h3>Servizi di ristrutturazione</h3>
+                     <p>Scegli un partner affidabile, sicuro e attento alle tue esigenze per acquistare il tuo immobile con la massima serenità.</p>
+                     <button class="btn rad-1 no-print">Scopri di più</button>
+                  </div>
+                  <div class="col-md-4 txt-center right">
+                     <img src="img/icons/servizi-tecnici-b.svg" class="w-30p rad-c mb-2" alt="">
+                     <h3>Servizi tecnici</h3>
+                     <p>Scegli un partner affidabile, sicuro e attento alle tue esigenze per acquistare il tuo immobile con la massima serenità.</p>
+                     <button class="btn rad-1 no-print">Scopri di più</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> <!-- what -->
+
+      <!-- newsletter -->
+      <section class="newsletter no-print">
+         <div class="container txt-center">
+            <h3 class="main-title">
+               Resta aggiornato con il nostro servizio Email
+            </h3>
+            <p class="txt-lead">Ricevi via email gli annunci che corrispondono all'immobile da te cercato.</p>
+            <form action="">
+               <div class="main-newsletter mt-3">
+                  <!-- Advanced-search -->
+                  <div class="name">
+                     <label for="name">Nome</label>
+                     <input type="text" name="name">
+                  </div>
+                  <div class="lastname">
+                     <label for="lastname">Cognome</label>
+                     <input type="text" name="lastname">
+                  </div>
+                  <div class="email">
+                     <label for="email">Email</label>
+                     <input type="email" name="email">
+                  </div>
+               </div>
+               <p class="txt-note my-2">Acconsento al trattamento dei miei Dati secondo le modalità e le finalità illustrate nell'Informativa sul Trattamento dei Dati personali (Regolamento (UE) 2016/679 - GDPR).<br>
+               Essi saranno utilizzati esclusivamente per rispondere a richieste individuali.</p>
+               <div class="check">
+                  <input type="checkbox" name="tdp" id="">
+                  <label for="tdp">Acconsento</label>
+               </div>
+               <button type="submit" class="btn rad-1 icon-left"><i class="fas fa-search"></i> Attiva ora gratis</button>
+            </form>
+         </div>
+      </section> <!-- newsletter -->
+      
+   </main>
+
+   <!-- FOOTER -->
+   <footer class="px-2 py-3 no-print">
+      <div class="footer__social">
+         <ul>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+         </ul>
+      </div>
+      <div class="footer__menu">
+         <ul>
+            <li><a href="#">Dati societari</a></li>
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+         </ul>
+      </div>
+      <p class="txt-note txt-center mt-2">© Copyright 2020 - Gruppo Dellerba s.r.l. Unipersonale | P.Iva 01287930083</p>
+   </footer>
+
+
+   
+   <!-- SCRIPT -->
+   <script src="js/_navbar.js"></script>
+   <script src="js/_forms.js"></script>
+   
+</body>
+</html>
