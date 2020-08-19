@@ -5128,10 +5128,26 @@ div.panel ul {
 * ==================================================
 */
 header .header__image {
-  height: 20vh;
+  height: 30vh;
   background: url("../img/chi-siamo.jpg");
   background-size: cover;
-  background-position: center -34rem;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header__image::after {
+  content: url("../img/payoff.svg");
+  margin-top: 10rem;
+  display: block;
+  width: 50%;
 }
 
 header .header__image img {
@@ -5140,7 +5156,7 @@ header .header__image img {
   -o-object-position: center -34rem;
      object-position: center -34rem;
   width: 100%;
-  height: 100%;
+  height: 20vh;
 }
 
 /*
@@ -6121,6 +6137,10 @@ main .list-properties .slider .main-search .advanced-search.show-advamced-search
 * CONTATTI
 * ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
+.places {
+  background: #EEEEEE;
+}
+
 .places div > p i {
   width: 1.5rem;
   color: #ee7003;
@@ -6678,9 +6698,13 @@ main .list-properties .slider .main-search .advanced-search.show-advamced-search
   margin-top: 1rem;
 }
 
+.info__property .scheda .planimetrie .owl-carousel .owl-stage-outer {
+  height: 20rem;
+}
+
 .info__property .scheda .planimetrie img {
   width: 100%;
-  height: 60vh;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -6750,28 +6774,34 @@ main .list-properties .slider .main-search .advanced-search.show-advamced-search
 .info__property .contatti .scheda__form-title {
   background: #EEEEEE;
   margin-bottom: 0;
-  color: #3b3b3b;
+  color: #FFF;
   font-size: 1.25rem;
   border-bottom: 0;
   text-transform: uppercase;
   font-weight: 500;
-}
-
-.info__property .contatti .tel-us {
-  margin: 1.5rem;
-  padding: .5rem 1rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  width: 100%;
-  text-align: center;
-  display: block;
-  color: #545454;
-  text-decoration: none;
-  border: 1px solid #545454;
+  padding: 1rem;
+  background: #ee7003;
 }
 
 .info__property .contatti form {
   border: 1px solid #EEEEEE;
+}
+
+.info__property .contatti form input, .info__property .contatti form textarea {
+  background: #fff;
+  margin: .25rem 0;
+}
+
+.info__property .contatti form textarea {
+  min-height: 10rem;
+}
+
+.info__property .contatti form .grid-row {
+  padding: 0 1.5rem;
+}
+
+.info__property .contatti form p {
+  margin: 0;
 }
 
 /*
