@@ -1,9 +1,9 @@
 $(document).ready(function(){
    
    // Code
-   $(".owl-carousel").owlCarousel({
+   $("#owl-demo-scheda").owlCarousel({
             
-      items:3,
+      items:1,
       nav:true,
       navText: [
          '<i class="fas fa-chevron-left"></i>',
@@ -11,23 +11,49 @@ $(document).ready(function(){
       ],
       dots: false,
       dotsEach: false,
-      margin:10,
-      loop:false,
+      margin:0,
+      loop:true,
       autoplay:false,
       autoplayTimeout:2000,
       autoplayHoverPause:true,
       
-      responsive: {
+      responsive : {
          // breakpoint from 0 up
          0 : {
             items:1
          },
          // breakpoint from 768 up
          768 : {
-            items:3
+            items:1
          }
-         // breakpoint from 992 up
-         992 : {
+      }
+      
+   });
+
+
+   $(".owl-carousel-plan").owlCarousel({
+            
+      items:1,
+      nav:true,
+      navText: [
+         '<i class="fas fa-chevron-left"></i>',
+         '<i class="fas fa-chevron-right"></i>'
+      ],
+      dots: false,
+      dotsEach: false,
+      margin:0,
+      loop:true,
+      autoplay:false,
+      autoplayTimeout:2000,
+      autoplayHoverPause:true,
+      
+      responsive : {
+         // breakpoint from 0 up
+         0 : {
+            items:1
+         },
+         // breakpoint from 768 up
+         768 : {
             items:1
          }
       }

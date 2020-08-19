@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Gruppo Dellerba - Immobili in vendita</title>
+   <title>Gruppo Dellerba - Immobili in affitto</title>
    
    <!-- JQuery CDN -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -63,8 +63,8 @@
                <li>
                   <a href="#">Ricerca immobili</a>
                   <ul>
-                     <li class="active"><a href="immobili-in-vendita.html">Immobili in vendita</a></li>
-                     <li><a href="immobili-in-affitto.html">Immobili in affitto</a></li>
+                     <li><a href="immobili-in-vendita.html">Immobili in vendita</a></li>
+                     <li class="active"><a href="immobili-in-affitto.html">Immobili in affitto</a></li>
                   </ul>
                </li>
                <li><a href="vendi-immobili.html">Vendi immobili</a>
@@ -91,232 +91,261 @@
          </div><!-- .navbar__navicon -->
          
       </div> <!-- .navbar -->
-      <div class="header__image">
-         <img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="">
-      </div>
    </header>
 
    <!-- MAIN -->
    <main>
       <!-- properties -->
-      <section class="list-properties">
-         <div class="container-full p-0">
-            <h1 class="main-title">Immobili in affitto</h1>
-         </div>
-         <div class="listing-cards light">
-            <div class="container-full">
-
-               <!-- filter -->
-               <!-- slider + advanced search -->
-               <div class="slider">
-                  <div class="container">
-                     <form action="">
-                        <div class="main-search">
-                           <!-- General -->
-                           <div class="flex-search-1">
-                              <div class="custom-select">
-                                 <label for="contratto">Contratto</label>
-                                 <select name="contratto" id="contratto">
-                                    <option value="">Opzione</option>
-                                    <option value="">Opzione</option>
-                                    <option value="">Opzione</option>
-                                 </select>
-                              </div>
-                              <div class="comune">
-                                 <label for="comune">Comune / Zona</label>
-                                 <input type="text" name="comune" placeholder="...">
-                              </div>
-                              <div class="custom-select">
-                                 <label for="immobile">Tipologia</label>
-                                 <select name="immobile" id="immobile">
-                                    <option value="">Opzione</option>
-                                    <option value="">Opzione</option>
-                                    <option value="">Opzione</option>
-                                 </select>
-                              </div>
-                           </div>
-                           <!-- Details -->
-                           <div class="flex-search-2">
-                              <div class="price">
-                                 <label for="prezzo">Prezzo max</label>
-                                 <input type="text" name="prezzo" placeholder="...">
-                              </div>
-                              <div class="rifer">
-                                 <label for="rif">Rif</label>
-                                 <input class="rif" type="text" name="rif" placeholder="...">
-                              </div>
-                              <span class="divider d-xs-none d-lg-none"></span>
-                           </div>
-                           <!-- Advanced-search -->
-                           <div class="advanced-search">
-                              <div class="metratura">
-                                 <label for="metratura">Mq max</label>
-                                 <input type="text" name="metratura" placeholder="...">
-                              </div>
-                              <div class="locali">
-                                 <label for="locali">Locali</label>
-                                 <input type="text" name="locali" placeholder="...">
-                              </div>
-                              <div class="bagni">
-                                 <label for="bagni">Bagni</label>
-                                 <input type="text" name="bagni" placeholder="...">
-                              </div>
-                              <div class="piano">
-                                 <label for="piano">Piano</label>
-                                 <input type="text" name="piano" placeholder="...">
-                              </div>
-                              <div class="custom-select">
-                                 <label for="stato">Stato immobile</label>
-                                 <select name="stato" id="stato">
-                                    <option value="">Opzione</option>
-                                    <option value="">Opzione</option>
-                                    <option value="">Opzione</option>
-                                 </select>
-                              </div>
-                              <div class="features">
-                                 <div class="check">
-                                    <input type="checkbox" name="box" id="">
-                                    <label for="box">Box</label>
-                                 </div>
-                                 <div class="check">
-                                    <input type="checkbox" name="balcone" id="">
-                                    <label for="balcone">Balcone</label>
-                                 </div>
-                                 <div class="check">
-                                    <input type="checkbox" name="terrazzo" id="">
-                                    <label for="terrazzo">Terrazzo</label>
-                                 </div>
-                                 <div class="check">
-                                    <input type="checkbox" name="ascensore" id="">
-                                    <label for="ascensore">Ascensore</label>
-                                 </div>
-                                 <div class="check">
-                                    <input type="checkbox" name="giardino" id="">
-                                    <label for="giardino">Giardino</label>
-                                 </div>
-                                 <div class="check">
-                                    <input type="checkbox" name="arredato" id="">
-                                    <label for="arredato">Arredato</label>
-                                 </div>
-                              </div>
-                           </div>
-                           <button type="submit">Filtra</button>
-                        </div>
-                     </form>
-                  </div> <!-- .advanced-search -->
-               </div> <!-- .slider -->
-            </div> <!-- .listing-cards -->
-         </div>
-      </section>
-      <div class="container">
-         <div class="filters">
-            <div class="custom-select">
-               <select name="stato" id="stato">
-                  <option value="">Prezzo crescente</option>
-                  <option value="">Prezzo decrescente</option>
-                  <option value="">Data crescente</option>
-                  <option value="">Data decrescente</option>
-                  <option value="">Numero locali crescente</option>
-                  <option value="">Numero locali decrescente</option>
-                  <option value="">Metratura crescente</option>
-                  <option value="">Metratura decrescente</option>
-               </select>
-            </div>
-            <div class="more-filters">
-               <span class="px-1"><i class="fas fa-filter"></i> Filtri</span>
-            </div>
-         </div>
-      </div>
-
-      <section class="filtered-properties list px-2 pt-2">
-         <!-- filtered properties -->
+      <section class="filtered-properties list">
+         
          <div class="container">
-            <div class="grid-row">
-               <div class="col-md-5">
-                  <div id="owl-demo-1" class="owl-carousel new owl-theme card-img m-0">
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                  </div>
-               </div>
-               <div class="col-md-7">
-                  <div class="card-info">
-                     <h2 class="card-title">Garage / Posto Auto Via Artallo, Imperia</h2>
-                     <div class="card-details">
-                        <span class="price">€250.000</span>
-                        <span class="rooms">3</span>
-                        <span class="size">90</span>
-                        <span class="bath">2</span>
-                     </div>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio animi, obcaecati sed aspernatur quaerat maiores fuga alias rem esse. Possimus rerum consequuntur ad et iste...</p>
-                     <a href="#" class="btn btn-sm primary">Scheda immobile</a>
-                  </div>
-               </div>
-            </div>
-            <div class="grid-row">
-               <div class="col-md-5">
-                  <div id="owl-demo-2" class="owl-carousel owl-theme card-img m-0">
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                  </div>
-               </div>
-               <div class="col-md-7">
-                  <div class="card-info">
-                     <h2 class="card-title">Garage / Posto Auto Via Artallo, Imperia</h2>
-                     <div class="card-details">
-                        <span class="price">€250.000</span>
-                        <span class="rooms">3</span>
-                        <span class="size">90</span>
-                        <span class="bath">2</span>
-                     </div>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio animi, obcaecati sed aspernatur quaerat maiores fuga alias rem esse. Possimus rerum consequuntur ad et iste...</p>
-                     <a href="#" class="btn btn-sm primary">Scheda immobile</a>
-                  </div>
-               </div>
-            </div>
-            <div class="grid-row">
-               <div class="col-md-5">
-                  <div id="owl-demo-3" class="owl-carousel owl-theme card-img m-0">
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                     <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
-                  </div>
-               </div>
-               <div class="col-md-7">
-                  <div class="card-info">
-                     <h2 class="card-title">Garage / Posto Auto Via Artallo, Imperia</h2>
-                     <div class="card-details">
-                        <span class="price">€250.000</span>
-                        <span class="rooms">3</span>
-                        <span class="size">90</span>
-                        <span class="bath">2</span>
-                     </div>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio animi, obcaecati sed aspernatur quaerat maiores fuga alias rem esse. Possimus rerum consequuntur ad et iste...</p>
-                     <a href="#" class="btn btn-sm primary">Scheda immobile</a>
-                  </div>
-               </div>
-            </div>
-         </div>   
-      </section>
+            <div class="grid-row mt-4">
 
-      <!-- parallax divider -->
-      <div class="parallax-divider"></div>
+               <!-- PROPERTIES -->
+               <div class="col-md-9">
+                  <h1 class="main-title">Immobili in affitto</h1>
+                  <a href="#x-filter" class="d-md-none filter-jump">
+                     Filtra immobili
+                  </a>
+                  <!-- filtered properties -->
+                  <div class="grid-row">
+                     <div class="col-md-5">
+                        <div id="owl-demo-1" class="owl-carousel new owl-theme card-img m-0">
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                        </div>
+                     </div>
+                     <div class="col-md-7">
+                        <div class="card-info">
+                           <h2 class="card-title">Garage / Posto Auto Via Artallo, Imperia</h2>
+                           <div class="card-details">
+                              <span class="price">€250.000</span>
+                              <span class="rooms">3</span>
+                              <span class="size">90</span>
+                              <span class="bath">2</span>
+                           </div>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio animi, obcaecati sed aspernatur quaerat maiores fuga alias rem esse. Possimus rerum consequuntur ad et iste...</p>
+                           <a href="#" class="btn btn-sm primary no-print">Scheda immobile</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="grid-row">
+                     <div class="col-md-5">
+                        <div id="owl-demo-2" class="owl-carousel owl-theme card-img m-0">
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                        </div>
+                     </div>
+                     <div class="col-md-7">
+                        <div class="card-info">
+                           <h2 class="card-title">Garage / Posto Auto Via Artallo, Imperia</h2>
+                           <div class="card-details">
+                              <span class="price">€250.000</span>
+                              <span class="rooms">3</span>
+                              <span class="size">90</span>
+                              <span class="bath">2</span>
+                           </div>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio animi, obcaecati sed aspernatur quaerat maiores fuga alias rem esse. Possimus rerum consequuntur ad et iste...</p>
+                           <a href="#" class="btn btn-sm primary no-print">Scheda immobile</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="grid-row">
+                     <div class="col-md-5">
+                        <div id="owl-demo-3" class="owl-carousel owl-theme card-img m-0">
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                           <div class="item"><img src="https://www.thespruce.com/thmb/nrXC0ctee1MaqF0QSLrt7Kgo0tA=/3648x3648/smart/filters:no_upscale()/GettyImages-9261821821-5c69c1b7c9e77c0001675a49.jpg" alt="Owl Image"></div>
+                        </div>
+                     </div>
+                     <div class="col-md-7">
+                        <div class="card-info">
+                           <h2 class="card-title">Garage / Posto Auto Via Artallo, Imperia</h2>
+                           <div class="card-details">
+                              <span class="price">€250.000</span>
+                              <span class="rooms">3</span>
+                              <span class="size">90</span>
+                              <span class="bath">2</span>
+                           </div>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio animi, obcaecati sed aspernatur quaerat maiores fuga alias rem esse. Possimus rerum consequuntur ad et iste...</p>
+                           <a href="#" class="btn btn-sm primary no-print">Scheda immobile</a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Pagination -->
+                  <div class="pagination no-print">
+                     <ul>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <!-- FILTERS -->
+               <div class="col-md-3 search-filters no-print">
+                  
+                  <div id="x-filter" class="pt-4 d-md-none"></div>
+                  <form action="">
+                     <div class="main-search">
+                        <div class="search-top">
+                           <h1 class="search-title">
+                              Filtro di ricerca
+                           </h1>
+                        </div>
+                        <div class="custom-select mb-2">
+                           <label for="orderby">Ordina immobili per:</label>
+                           <select name="orderby" id="orderby">
+                              <option value="">Prezzo crescente</option>
+                              <option value="">Prezzo decrescente</option>
+                              <option value="">Data crescente</option>
+                              <option value="">Data decrescente</option>
+                              <option value="">Numero locali crescente</option>
+                              <option value="">Numero locali decrescente</option>
+                              <option value="">Metratura crescente</option>
+                              <option value="">Metratura decrescente</option>
+                           </select>
+                        </div>
+                        <!-- General -->
+                        <div class="flex-search-1">
+                           <div class="custom-select">
+                              <label for="contratto">Contratto</label>
+                              <select name="contratto" id="contratto">
+                                 <option value="Vendita">Vendita</option>
+                                 <option value="Affitto">Vendita</option>
+                                 <option value="Test">Affitto</option>
+                              </select>
+                           </div>
+                           <div class="comune">
+                              <label for="comune">Comune / Zona</label>
+                              <input type="text" name="comune" placeholder="Inserisci il comune">
+                           </div>
+                           <div class="custom-select">
+                              <label for="immobile">Tipologia</label>
+                              <select name="immobile" id="immobile">
+                                 <option value="">Tipologia</option>
+                                 <option value="Appartamento">Appartamento</option>
+                                 <option value="Garage / Posto auto">Garage / Posto auto</option>
+                              </select>
+                           </div>
+                        </div>
+                        <!-- Details -->
+                        <div class="flex-search-2 my-2">
+                           <div class="price">
+                              <label for="price-min">Prezzo minimo</label>
+                              <input list="pricemin" id="price-min" name="price-min" placeholder="€ Min" />
+                              <datalist id="pricemin">
+                                 <option value="€100.000">
+                                 <option value="€200.000">
+                                 <option value="€300.000">
+                                 <option value="€400.000">
+                                 <option value="Indifferente"></option>
+                              </datalist>
+                           </div>
+                           <div class="price">
+                              <label for="price-max">Prezzo massimo</label>
+                              <input list="pricemax" id="price-max" name="price-max" placeholder="€ Max" />
+                              <datalist id="pricemax">
+                                 <option value="€100.000">
+                                 <option value="€200.000">
+                                 <option value="€300.000">
+                                 <option value="€400.000">
+                                 <option value="Indifferente"></option>
+                              </datalist>
+                           </div>
+                           <div class="rifer">
+                              <label for="rif">Riferimento</label>
+                              <input class="rif" type="text" name="rif" placeholder="Rif">
+                           </div>
+                        </div>
+      
+                        <!-- Advanced-search -->
+                        <div class="advanced-search">
+                           <div class="metratura">
+                              <label for="metratura">Metratura massima</label>
+                              <input type="text" name="metratura" placeholder="Mq Max">
+                           </div>
+                           <div class="locali">
+                              <label for="locali">Numero Locali</label>
+                              <input type="text" name="locali" placeholder="N. Locali">
+                           </div>
+                           <div class="bagni">
+                              <label for="bagni">Numero Bagni</label>
+                              <input type="text" name="bagni" placeholder="N. Bagni">
+                           </div>
+                           <div class="custom-select">
+                              <label for="stato">Piano</label>
+                              <select name="piano" id="piano">
+                                 <option value="">Piano</option>
+                                 <option value="">Terra</option>
+                                 <option value="">Seminterrato</option>
+                              </select>
+                           </div>
+                           <div class="custom-select">
+                              <label for="stato">Stato immobile</label>
+                              <select name="stato" id="stato">
+                                 <option value="">Condizioni</option>
+                                 <option value="">Da ristrutturare</option>
+                                 <option value="">Opzione</option>
+                              </select>
+                           </div>
+                           <div class="features">
+                              <div class="check">
+                                 <input type="checkbox" name="box" id="">
+                                 <label for="box">Box</label>
+                              </div>
+                              <div class="check">
+                                 <input type="checkbox" name="balcone" id="">
+                                 <label for="balcone">Balcone</label>
+                              </div>
+                              <div class="check">
+                                 <input type="checkbox" name="terrazzo" id="">
+                                 <label for="terrazzo">Terrazzo</label>
+                              </div>
+                              <div class="check">
+                                 <input type="checkbox" name="ascensore" id="">
+                                 <label for="ascensore">Ascensore</label>
+                              </div>
+                              <div class="check">
+                                 <input type="checkbox" name="giardino" id="">
+                                 <label for="giardino">Giardino</label>
+                              </div>
+                              <div class="check">
+                                 <input type="checkbox" name="arredato" id="">
+                                 <label for="arredato">Arredato</label>
+                              </div>
+                           </div>
+                        </div>
+      
+                        <div class="search-btn">
+                           <button type="submit" class="btn primary m-0">CERCA</button>
+                        </div>
+                        
+                     </div>
+                  </form>
+
+               </div>
+            </div>
+         </div>
+         
+      </section>
       
    </main>
 

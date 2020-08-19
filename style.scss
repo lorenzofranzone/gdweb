@@ -137,7 +137,7 @@ div.panel {
          display: flex;
          align-self: center;
          justify-self: center;
-         padding: .5rem .75rem;
+         padding: .25rem .75rem;
          margin: 1rem .25rem;
          border: 1px solid $secondary;
          cursor: pointer;
@@ -405,7 +405,41 @@ main{
 
 // IMMOBILI IN VENDITA / AFFITTO
 
+main{
 
+   .filter-jump{
+      color: $text-dark;
+      text-transform: uppercase;
+      text-align: right;
+      font-weight: 400;
+      padding: .25rem .5rem;
+      background: $light;
+   }
+
+   .list-properties{
+      
+      .slider{
+         background: none;
+         margin: 0;
+         min-height: auto;
+         padding: 6rem 0;
+         background: red;
+         
+         .main-search{
+            
+            .advanced-search{
+               display: none;
+
+               &.show-advamced-search{display: block;}
+            }
+            
+         }
+         
+      } // .slider
+      
+   } // .list-properties
+
+} // main
 
 
 /*
@@ -1386,9 +1420,12 @@ main{
 * ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
 
+
 .info__property{
    display: flex;
-   margin-top: 4rem;
+   margin-top: 3rem;
+
+   section{ padding: .9rem 0!important; }
    
    .scheda{
       flex: 75% 1 1;
@@ -1418,10 +1455,11 @@ main{
          .gallery__slider{
             flex: 2;
             height: 100%;
+            width: 50%;
             
             img{
                width: 100%;
-               height: 100%;
+               height: 40vh;
                object-fit: cover;
                object-position: center;
                border-right: 2px solid #fff;
@@ -1455,8 +1493,8 @@ main{
          display: flex;
          align-items: center;
          flex-flow: row wrap;
-         justify-content: space-between;
-         padding: 1rem 0;
+         justify-content: flex-start;
+         padding: .5rem 0;
          
          > div{
             display: flex;
@@ -1478,7 +1516,7 @@ main{
       } // .scheda__icons
       
       .card-info{
-         padding: 2rem 0 1rem;
+         padding: 1rem 0 1rem;
          color: $text-dark;
          border-top: 1px solid $light;
          
@@ -1488,7 +1526,7 @@ main{
          }
             
          .card-details{
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             line-height: 2rem;
             
             span{
@@ -1623,9 +1661,14 @@ main{
       */
       
       .planimetrie{
+
+         .owl-carousel .owl-stage-outer{
+            height: 20rem;
+         }
+
          img{
             width: 100%;
-            height: 60vh;
+            height: 100%;
             object-fit: cover;
             object-position: center;
          }
@@ -1661,39 +1704,40 @@ main{
       }
       
    } // .scheda
+
+   .sidebar{ padding: 0; }
    
    .contatti{
       flex: 25% 1 1;
       margin-bottom: 3rem;
+      padding: 1rem;
+      background: $light;
       
       .scheda__form-title{
-         padding: 0.5rem 1rem;
          background: $light;
          margin-bottom: 0;
-         color: $text-dark;
-         font-size: 1rem;
-         border-left: 2px solid $secondary;
+         color: $text-light;
+         font-size: 1.25rem;
          border-bottom: 0;
          text-transform: uppercase;
          font-weight: 500;
+         padding: 1rem;
+         background: $primary;
       }
 
-      .tel-us{
-         margin: 1.5rem;
-         padding: .5rem 1rem;
-         font-size: 1.25rem;
-         font-weight: 500;
-         width: 100%;
-         text-align: center;
-         display: block;
-         color: $secondary;
-         text-decoration: none;
-         border: 1px solid $secondary;
-      }
-      
       form{
          // background: lighten($light,4);
          border: 1px solid $light;
+
+         input, textarea{
+            background: #fff;
+            margin: .25rem 0;
+         }
+         textarea{ min-height: 10rem; }
+
+         .grid-row{ padding: 0 1.5rem; }
+
+         p{ margin: 0; }
       }
       
    } // .contatti

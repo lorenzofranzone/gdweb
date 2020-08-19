@@ -104,6 +104,9 @@
                <!-- PROPERTIES -->
                <div class="col-md-9">
                   <h1 class="main-title">Immobili in vendita</h1>
+                  <a href="#x-filter" class="d-md-none filter-jump">
+                     Filtra immobili
+                  </a>
                   <!-- filtered properties -->
                   <div class="grid-row">
                      <div class="col-md-5">
@@ -128,7 +131,7 @@
                               <span class="bath">2</span>
                            </div>
                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio animi, obcaecati sed aspernatur quaerat maiores fuga alias rem esse. Possimus rerum consequuntur ad et iste...</p>
-                           <a href="#" class="btn btn-sm primary no-print">Scheda immobile</a>
+                           <a href="scheda-immobile.html" class="btn btn-sm primary no-print">Scheda immobile</a>
                         </div>
                      </div>
                   </div>
@@ -198,13 +201,27 @@
                
                <!-- FILTERS -->
                <div class="col-md-3 search-filters no-print">
-
+                  
+                  <div id="x-filter" class="pt-4 d-md-none"></div>
                   <form action="">
                      <div class="main-search">
                         <div class="search-top">
                            <h1 class="search-title">
                               Filtro di ricerca
                            </h1>
+                        </div>
+                        <div class="custom-select mb-2">
+                           <label for="orderby">Ordina immobili per:</label>
+                           <select name="orderby" id="orderby">
+                              <option value="">Prezzo crescente</option>
+                              <option value="">Prezzo decrescente</option>
+                              <option value="">Data crescente</option>
+                              <option value="">Data decrescente</option>
+                              <option value="">Numero locali crescente</option>
+                              <option value="">Numero locali decrescente</option>
+                              <option value="">Metratura crescente</option>
+                              <option value="">Metratura decrescente</option>
+                           </select>
                         </div>
                         <!-- General -->
                         <div class="flex-search-1">
@@ -230,7 +247,7 @@
                            </div>
                         </div>
                         <!-- Details -->
-                        <div class="flex-search-2">
+                        <div class="flex-search-2 my-2">
                            <div class="price">
                               <label for="price-min">Prezzo minimo</label>
                               <input list="pricemin" id="price-min" name="price-min" placeholder="€ Min" />

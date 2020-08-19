@@ -24,6 +24,10 @@ $(document).ready(function(){
          0 : {
             items:1
          },
+         // breakpoint from 576 up
+         576 : {
+            items:2
+         },
          // breakpoint from 768 up
          768 : {
             items:1
