@@ -1255,7 +1255,7 @@ main{
             .search-top .search-title{
                padding: .4rem;
             }
-               
+            
          } // .main-search
             
       } // .slider
@@ -1278,6 +1278,18 @@ main{
    input{ background: #fff; }
 
    .features, .search-btn{ margin-top: 1rem; }
+
+   .save-search{
+      background: $primary;
+      display: inline-block;
+      padding: .75rem 1rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+   }
+
 }
 
 
@@ -1316,6 +1328,32 @@ main{
    }
    
 } // .filters
+
+.pop-save-search{
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background: rgba(0,0,0,.9);
+   z-index: 3;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   display: none;
+
+   .close{
+      font-size: 3rem;
+      text-align: center;
+      cursor: pointer;
+   }
+
+   .newsletter{
+      color: $text-dark;
+   }
+}
 
 .show{ display: block!important; }
 

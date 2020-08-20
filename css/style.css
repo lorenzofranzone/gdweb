@@ -3812,6 +3812,17 @@ main .list-properties .slider .main-search .advanced-search.show-advamced-search
   margin-top: 1rem;
 }
 
+.search-filters .save-search {
+  background: #ee7003;
+  display: inline-block;
+  padding: .75rem 1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .filters {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3865,6 +3876,41 @@ main .list-properties .slider .main-search .advanced-search.show-advamced-search
 
 .filters .custom-select span {
   padding: 0 1.1rem;
+}
+
+.pop-save-search {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  display: none;
+}
+
+.pop-save-search .close {
+  font-size: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pop-save-search .newsletter {
+  color: #3b3b3b;
 }
 
 .show {

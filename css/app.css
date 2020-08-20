@@ -5830,6 +5830,13 @@ main .list-properties .slider .main-search .advanced-search.show-advamced-search
 .adv .btn-call::after {
   content: 'Una proposta esclusiva Gruppo Dellerba';
   display: block;
+  position: absolute;
+  color: #fff;
+  bottom: -3rem;
+  font-size: .8rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /*
@@ -6809,6 +6816,10 @@ main .list-properties .slider .main-search .advanced-search.show-advamced-search
 
 .info__property .sidebar {
   padding: 0;
+}
+
+.info__property div.save-search {
+  background: red !important;
 }
 
 .info__property .contatti {

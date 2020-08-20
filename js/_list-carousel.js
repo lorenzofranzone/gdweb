@@ -35,6 +35,14 @@ $(document).ready(function(){
       }
       
    });
+
+   $('.save-search').on('click', function(){
+      $('.pop-save-search').css('display','flex');
+   });
+
+   $('.close').on('click', function(){
+      $('.pop-save-search').css('display','none');
+   });
    
    
    //////////////////////////////////////////////////

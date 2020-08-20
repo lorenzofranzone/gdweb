@@ -201,7 +201,6 @@
                
                <!-- FILTERS -->
                <div class="col-md-3 search-filters no-print">
-                  
                   <div id="x-filter" class="pt-4 d-md-none"></div>
                   <form action="">
                      <div class="main-search">
@@ -210,6 +209,7 @@
                               Filtro di ricerca
                            </h1>
                         </div>
+                        <div class="save-search mb-2">Salva la ricerca</div>
                         <div class="custom-select mb-2">
                            <label for="orderby">Ordina immobili per:</label>
                            <select name="orderby" id="orderby">
@@ -346,6 +346,43 @@
          </div>
          
       </section>
+
+      <div class="pop-save-search">
+         <i class="fas fa-times close"></i>
+         <!-- newsletter -->
+         <section class="newsletter no-print">
+            <div class="container txt-center">
+               <h3 class="main-title">
+                  Resta aggiornato con il nostro servizio Email
+               </h3>
+               <p class="txt-lead">Ricevi via email gli annunci che corrispondono all'immobile da te cercato.</p>
+               <form action="">
+                  <div class="main-newsletter mt-3">
+                     <!-- Advanced-search -->
+                     <div class="name">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name">
+                     </div>
+                     <div class="lastname">
+                        <label for="lastname">Cognome</label>
+                        <input type="text" name="lastname">
+                     </div>
+                     <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                     </div>
+                  </div>
+                  <p class="txt-note my-2">Acconsento al trattamento dei miei Dati secondo le modalità e le finalità illustrate nell'Informativa sul Trattamento dei Dati personali (Regolamento (UE) 2016/679 - GDPR).<br>
+                  Essi saranno utilizzati esclusivamente per rispondere a richieste individuali.</p>
+                  <div class="check">
+                     <input type="checkbox" name="tdp" id="">
+                     <label for="tdp">Acconsento</label>
+                  </div>
+                  <button type="submit" class="btn rad-1 icon-left"><i class="fas fa-search"></i> Attiva ora gratis</button>
+               </form>
+            </div>
+         </section> <!-- newsletter -->
+      </div>
       
    </main>
 
