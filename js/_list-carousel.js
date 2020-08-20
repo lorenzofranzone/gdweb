@@ -17,7 +17,7 @@ $(document).ready(function(){
       loop:true,
       autoplay:false,
       autoplayTimeout:2000,
-      autoplayHoverPause:true,
+      autoplayHoverPause:false,
       
       responsive : {
          // breakpoint from 0 up

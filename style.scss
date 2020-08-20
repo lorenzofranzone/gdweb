@@ -173,12 +173,22 @@ header{
    .header__image{
       height: 30vh;
       // Default header image
-      background: url('../img/header-img.jpg');
-      background-size: cover;
-      background-position: center;
+      background: url('../img/gd-home1.jpg');
+      background-size: cover!important;
+      background-position: center!important;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &.office{ background: url('../img/gd-office.jpg'); }
+      &.generic{ background: url('../img/gd-generic.jpg'); }
+      &.home2{ background: url('../img/gd-home2.jpg'); }
+      &.vendita{ background: url('../img/gd-vendita.jpg'); }
+      &.love{ background: url('../img/gd-love.jpg'); }
+      &.rp{ background: url('../img/gd-rp.jpg'); }
+      &.tec{ background: url('../img/gd-tec.jpg'); }
+      &.valutazione{ background: url('../img/gd-valutazione.jpg'); }
+      &.contact{ background: url('../img/gd-contact.jpg'); }
 
       &::after{
          content: url('../img/payoff.svg');
@@ -748,6 +758,17 @@ main{
       
       &:hover{
          background: darken(#174079,5);
+      }
+
+      &::after{
+         content: 'Una proposta esclusiva Gruppo Dellerba';
+         display: block;
+         position: absolute;
+         color: #fff;
+         bottom: -3rem;
+         font-size: .8rem;
+         left: 50%;
+         transform: translateX(-50%);
       }
    }
    

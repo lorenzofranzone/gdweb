@@ -1764,6 +1764,10 @@ xmp:before {
   text-align: justify;
 }
 
+.txt-light {
+  color: #FFF;
+}
+
 /*
 * //////////////////////////////////////////////////
 * ==================================================
@@ -4266,6 +4270,10 @@ xmp:before {
   text-align: justify;
 }
 
+.txt-light {
+  color: #FFF;
+}
+
 /*
 * //////////////////////////////////////////////////
 * ==================================================
@@ -5129,9 +5137,9 @@ div.panel ul {
 */
 header .header__image {
   height: 30vh;
-  background: url("../img/chi-siamo.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("../img/gd-home1.jpg");
+  background-size: cover !important;
+  background-position: center !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5143,11 +5151,47 @@ header .header__image {
           align-items: center;
 }
 
+header .header__image.office {
+  background: url("../img/gd-office.jpg");
+}
+
+header .header__image.generic {
+  background: url("../img/gd-generic.jpg");
+}
+
+header .header__image.home2 {
+  background: url("../img/gd-home2.jpg");
+}
+
+header .header__image.vendita {
+  background: url("../img/gd-vendita.jpg");
+}
+
+header .header__image.love {
+  background: url("../img/gd-love.jpg");
+}
+
+header .header__image.rp {
+  background: url("../img/gd-rp.jpg");
+}
+
+header .header__image.tec {
+  background: url("../img/gd-tec.jpg");
+}
+
+header .header__image.valutazione {
+  background: url("../img/gd-valutazione.jpg");
+}
+
+header .header__image.contact {
+  background: url("../img/gd-contact.jpg");
+}
+
 header .header__image::after {
   content: url("../img/payoff.svg");
   margin-top: 10rem;
   display: block;
-  width: 50%;
+  width: 30%;
 }
 
 header .header__image img {
@@ -5781,6 +5825,11 @@ main .list-properties .slider .main-search .advanced-search.show-advamced-search
 
 .adv .btn-call:hover {
   background: #133564;
+}
+
+.adv .btn-call::after {
+  content: 'Una proposta esclusiva Gruppo Dellerba';
+  display: block;
 }
 
 /*
